@@ -3,10 +3,14 @@
 //  Voir Dire
 //
 //  Created by Greg Schmelter on 3/6/13.
-//  Copyright (c) 2013 Greg Schmelter. All rights reserved.
+//  Copyright (c) 2013 Voir Dire. All rights reserved.
 //
 
 #import "VDAppDelegate.h"
+
+@interface VDAppDelegate ()
+
+@end
 
 @implementation VDAppDelegate
 
@@ -14,12 +18,15 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+#pragma mark - UIApplicationDelegate
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"bkgd_navbar.png"] forBarMetrics:UIBarMetricsDefault];
+    
     return YES;
 }
 
@@ -144,6 +151,11 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+- (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+{
+    return (UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight);
 }
 
 @end

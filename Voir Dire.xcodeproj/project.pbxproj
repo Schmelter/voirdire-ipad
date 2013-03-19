@@ -7,35 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8968861516F92E7D00B440B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968861216F92E7D00B440B7 /* main.m */; };
+		8968861B16F92E9200B440B7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8968861816F92E9200B440B7 /* Default-568h@2x.png */; };
+		8968861C16F92E9200B440B7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8968861916F92E9200B440B7 /* Default.png */; };
+		8968861D16F92E9200B440B7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8968861A16F92E9200B440B7 /* Default@2x.png */; };
+		8968862216F92ECE00B440B7 /* Voir_Dire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8968862016F92ECE00B440B7 /* Voir_Dire.xcdatamodeld */; };
 		898122A316E8465E0028C05E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898122A216E8465E0028C05E /* UIKit.framework */; };
 		898122A516E8465E0028C05E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898122A416E8465E0028C05E /* Foundation.framework */; };
 		898122A716E8465E0028C05E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898122A616E8465E0028C05E /* CoreGraphics.framework */; };
 		898122A916E8465E0028C05E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898122A816E8465E0028C05E /* CoreData.framework */; };
 		898122AF16E8465E0028C05E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 898122AD16E8465E0028C05E /* InfoPlist.strings */; };
-		898122B116E8465E0028C05E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 898122B016E8465E0028C05E /* main.m */; };
 		898122B516E8465E0028C05E /* VDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 898122B416E8465E0028C05E /* VDAppDelegate.m */; };
-		898122B716E8465E0028C05E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 898122B616E8465E0028C05E /* Default.png */; };
-		898122B916E8465E0028C05E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 898122B816E8465E0028C05E /* Default@2x.png */; };
-		898122BB16E8465E0028C05E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 898122BA16E8465E0028C05E /* Default-568h@2x.png */; };
-		898122BE16E8465E0028C05E /* Voir_Dire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 898122BC16E8465E0028C05E /* Voir_Dire.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8968861216F92E7D00B440B7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Resources/main.m; sourceTree = "<group>"; };
+		8968861316F92E7D00B440B7 /* Voir Dire-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Voir Dire-Info.plist"; path = "Resources/Voir Dire-Info.plist"; sourceTree = "<group>"; };
+		8968861416F92E7D00B440B7 /* Voir Dire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Voir Dire-Prefix.pch"; path = "Resources/Voir Dire-Prefix.pch"; sourceTree = "<group>"; };
+		8968861816F92E9200B440B7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8968861916F92E9200B440B7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		8968861A16F92E9200B440B7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		8968862116F92ECE00B440B7 /* Voir_Dire.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Voir_Dire.xcdatamodel; sourceTree = "<group>"; };
+		8968862D16F92F7900B440B7 /* VDConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDConstants.h; sourceTree = "<group>"; };
 		8981229E16E8465E0028C05E /* Voir Dire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Voir Dire.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		898122A216E8465E0028C05E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		898122A416E8465E0028C05E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		898122A616E8465E0028C05E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		898122A816E8465E0028C05E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		898122AC16E8465E0028C05E /* Voir Dire-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Voir Dire-Info.plist"; sourceTree = "<group>"; };
 		898122AE16E8465E0028C05E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		898122B016E8465E0028C05E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		898122B216E8465E0028C05E /* Voir Dire-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Voir Dire-Prefix.pch"; sourceTree = "<group>"; };
 		898122B316E8465E0028C05E /* VDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VDAppDelegate.h; sourceTree = "<group>"; };
 		898122B416E8465E0028C05E /* VDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VDAppDelegate.m; sourceTree = "<group>"; };
-		898122B616E8465E0028C05E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		898122B816E8465E0028C05E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		898122BA16E8465E0028C05E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		898122BD16E8465E0028C05E /* Voir_Dire.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Voir_Dire.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8968861716F92E9200B440B7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8968861816F92E9200B440B7 /* Default-568h@2x.png */,
+				8968861916F92E9200B440B7 /* Default.png */,
+				8968861A16F92E9200B440B7 /* Default@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		8968861E16F92EBC00B440B7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		8968861F16F92ECE00B440B7 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				8968862016F92ECE00B440B7 /* Voir_Dire.xcdatamodeld */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		8968862316F92EDC00B440B7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8968862416F92EE400B440B7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8968862516F92EEC00B440B7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		8968862616F92EF600B440B7 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8968862716F92EFF00B440B7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8968862816F92F0E00B440B7 /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WebServices;
+			sourceTree = "<group>";
+		};
 		8981229316E8465E0028C05E = {
 			isa = PBXGroup;
 			children = (
@@ -84,26 +152,32 @@
 		898122AA16E8465E0028C05E /* Voir Dire */ = {
 			isa = PBXGroup;
 			children = (
+				8968862816F92F0E00B440B7 /* WebServices */,
+				8968862716F92EFF00B440B7 /* Views */,
+				8968862616F92EF600B440B7 /* View Controllers */,
+				8968862516F92EEC00B440B7 /* Util */,
+				8968862416F92EE400B440B7 /* Storyboards */,
+				8968862316F92EDC00B440B7 /* Protocols */,
+				8968861F16F92ECE00B440B7 /* Data Model */,
+				8968861E16F92EBC00B440B7 /* Categories */,
+				8968861716F92E9200B440B7 /* Images */,
 				898122B316E8465E0028C05E /* VDAppDelegate.h */,
 				898122B416E8465E0028C05E /* VDAppDelegate.m */,
-				898122BC16E8465E0028C05E /* Voir_Dire.xcdatamodeld */,
-				898122AB16E8465E0028C05E /* Supporting Files */,
+				898122AB16E8465E0028C05E /* Resources */,
+				8968862D16F92F7900B440B7 /* VDConstants.h */,
 			);
 			path = "Voir Dire";
 			sourceTree = "<group>";
 		};
-		898122AB16E8465E0028C05E /* Supporting Files */ = {
+		898122AB16E8465E0028C05E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				898122AC16E8465E0028C05E /* Voir Dire-Info.plist */,
+				8968861216F92E7D00B440B7 /* main.m */,
+				8968861316F92E7D00B440B7 /* Voir Dire-Info.plist */,
+				8968861416F92E7D00B440B7 /* Voir Dire-Prefix.pch */,
 				898122AD16E8465E0028C05E /* InfoPlist.strings */,
-				898122B016E8465E0028C05E /* main.m */,
-				898122B216E8465E0028C05E /* Voir Dire-Prefix.pch */,
-				898122B616E8465E0028C05E /* Default.png */,
-				898122B816E8465E0028C05E /* Default@2x.png */,
-				898122BA16E8465E0028C05E /* Default-568h@2x.png */,
 			);
-			name = "Supporting Files";
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,7 +208,7 @@
 			attributes = {
 				CLASSPREFIX = VD;
 				LastUpgradeCheck = 0450;
-				ORGANIZATIONNAME = "Greg Schmelter";
+				ORGANIZATIONNAME = "Voir Dire";
 			};
 			buildConfigurationList = 8981229816E8465E0028C05E /* Build configuration list for PBXProject "Voir Dire" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -159,9 +233,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				898122AF16E8465E0028C05E /* InfoPlist.strings in Resources */,
-				898122B716E8465E0028C05E /* Default.png in Resources */,
-				898122B916E8465E0028C05E /* Default@2x.png in Resources */,
-				898122BB16E8465E0028C05E /* Default-568h@2x.png in Resources */,
+				8968861B16F92E9200B440B7 /* Default-568h@2x.png in Resources */,
+				8968861C16F92E9200B440B7 /* Default.png in Resources */,
+				8968861D16F92E9200B440B7 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,9 +246,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				898122B116E8465E0028C05E /* main.m in Sources */,
 				898122B516E8465E0028C05E /* VDAppDelegate.m in Sources */,
-				898122BE16E8465E0028C05E /* Voir_Dire.xcdatamodeld in Sources */,
+				8968861516F92E7D00B440B7 /* main.m in Sources */,
+				8968862216F92ECE00B440B7 /* Voir_Dire.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,8 +322,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Voir Dire/Voir Dire-Prefix.pch";
-				INFOPLIST_FILE = "Voir Dire/Voir Dire-Info.plist";
+				GCC_PREFIX_HEADER = "Voir Dire/Resources/Voir Dire-Prefix.pch";
+				INFOPLIST_FILE = "Voir Dire/Resources/Voir Dire-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -259,8 +333,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Voir Dire/Voir Dire-Prefix.pch";
-				INFOPLIST_FILE = "Voir Dire/Voir Dire-Info.plist";
+				GCC_PREFIX_HEADER = "Voir Dire/Resources/Voir Dire-Prefix.pch";
+				INFOPLIST_FILE = "Voir Dire/Resources/Voir Dire-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -285,16 +359,17 @@
 				898122C316E8465E0028C05E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		898122BC16E8465E0028C05E /* Voir_Dire.xcdatamodeld */ = {
+		8968862016F92ECE00B440B7 /* Voir_Dire.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				898122BD16E8465E0028C05E /* Voir_Dire.xcdatamodel */,
+				8968862116F92ECE00B440B7 /* Voir_Dire.xcdatamodel */,
 			);
-			currentVersion = 898122BD16E8465E0028C05E /* Voir_Dire.xcdatamodel */;
+			currentVersion = 8968862116F92ECE00B440B7 /* Voir_Dire.xcdatamodel */;
 			path = Voir_Dire.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
