@@ -7,8 +7,11 @@
 //
 
 #import "VDViewController.h"
+#import "VDLoginViewController.h"
 
 @interface VDViewController ()
+
+@property (nonatomic, readwrite, strong) VDLoginViewController *loginVC;
 
 @end
 
@@ -19,8 +22,22 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.loginVC = nil;
     }
     return self;
 }
+
+-(void)viewDidLoad {
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    // Check if the user is logged in.  If not, then ask them to log in here.
+    self.loginVC = [[VDLoginViewController alloc] initWithNibName:@"VDLoginViewController" bundle:nil];
+    [self addChildViewController:self.loginVC];
+    [self.view addSubview:self.loginVC.view];
+    [self.loginVC didMoveToParentViewController:self];
+}
+
 
 @end

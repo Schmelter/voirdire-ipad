@@ -8,6 +8,6 @@
 
 #import "VDViewController.h"
 
-@interface VDLoginViewController : VDViewController <UIGestureRecognizerDelegate>
+@interface VDLoginViewController : UIViewController <UITextFieldDelegate>
 
 @end

@@ -17,6 +17,9 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="view" destination="6IT-Xx-Un8" id="HLD-Rp-2DI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qeH-9c-Udl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

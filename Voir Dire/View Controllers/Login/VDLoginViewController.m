@@ -7,6 +7,7 @@
 //
 
 #import "VDLoginViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface VDLoginViewController ()
 
@@ -14,6 +15,7 @@
 @property (nonatomic, readwrite, weak) IBOutlet UITextField *password;
 @property (nonatomic, readwrite, strong) IBOutletCollection(UITextField) NSArray *textFields;
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *backgroundTapGestureRecognizer;
+@property (nonatomic, readwrite, weak) IBOutlet UIView *contentView;
 
 -(IBAction)usernameReturn:(id)sender;
 -(IBAction)passwordReturn:(id)sender;
@@ -39,6 +41,13 @@
 	// Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    _contentView.layer.cornerRadius = 15;
+    _contentView.layer.masksToBounds = YES;
+    
+    [super viewWillAppear:animated];
+}
+
 -(IBAction)usernameReturn:(id)sender {
     [_password becomeFirstResponder];
 }
@@ -57,21 +66,17 @@
     
 }
 
-#pragma mark - UIGestureRecognizerDelegate
+#pragma mark ---
 
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
-{
-    if (gestureRecognizer == _backgroundTapGestureRecognizer) {
-        
-        // Allow background tap only if a text field is currently first responder
-        for (UITextField *textField in _textFields) {
-            
-            if (textField.isFirstResponder)
-                return YES;
-        }
+#pragma mark - UITextFieldDelegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (_username == textField) {
+        [_password becomeFirstResponder];
+    } else if (_password == textField) {
+        [_password resignFirstResponder];
     }
-    
-    return NO;
+    return YES;
 }
 
+#pragma mark ---
 @end
