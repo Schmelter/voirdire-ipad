@@ -15,4 +15,6 @@
 
 @interface VDViewController : UIViewController
 
+-(void)dismissLoginViewController;
+
 @end

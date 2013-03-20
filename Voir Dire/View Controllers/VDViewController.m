@@ -34,9 +34,16 @@
 -(void)viewWillAppear:(BOOL)animated {
     // Check if the user is logged in.  If not, then ask them to log in here.
     self.loginVC = [[VDLoginViewController alloc] initWithNibName:@"VDLoginViewController" bundle:nil];
+    self.loginVC.mainViewController = self;
     [self addChildViewController:self.loginVC];
     [self.view addSubview:self.loginVC.view];
     [self.loginVC didMoveToParentViewController:self];
+}
+
+-(void)dismissLoginViewController {
+    [self.loginVC willMoveToParentViewController:nil];
+    [self.loginVC.view removeFromSuperview];
+    [self.loginVC removeFromParentViewController];
 }
 
 

@@ -10,4 +10,6 @@
 
 @interface VDLoginViewController : UIViewController <UITextFieldDelegate>
 
+@property (nonatomic, readwrite, weak) VDViewController *mainViewController;
+
 @end

@@ -31,6 +31,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.mainViewController = nil;
     }
     return self;
 }
@@ -74,6 +75,7 @@
         [_password becomeFirstResponder];
     } else if (_password == textField) {
         [_password resignFirstResponder];
+        [self.mainViewController dismissLoginViewController];
     }
     return YES;
 }
