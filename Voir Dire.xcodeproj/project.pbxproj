@@ -18,7 +18,7 @@
 		8968863B16F933C200B440B7 /* AppFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8968863A16F933C200B440B7 /* AppFlow.storyboard */; };
 		8968865716F93C4F00B440B7 /* VDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968865516F93C4F00B440B7 /* VDLoginViewController.m */; };
 		8968865816F93C4F00B440B7 /* VDLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8968865616F93C4F00B440B7 /* VDLoginViewController.xib */; };
-		8968865B16F93DDE00B440B7 /* VDFirstPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968865A16F93DDE00B440B7 /* VDFirstPageViewController.m */; };
+		8968865B16F93DDE00B440B7 /* VDStartupPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968865A16F93DDE00B440B7 /* VDStartupPageViewController.m */; };
 		898122A316E8465E0028C05E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898122A216E8465E0028C05E /* UIKit.framework */; };
 		898122A516E8465E0028C05E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898122A416E8465E0028C05E /* Foundation.framework */; };
 		898122A716E8465E0028C05E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898122A616E8465E0028C05E /* CoreGraphics.framework */; };
@@ -45,8 +45,8 @@
 		8968865416F93C4F00B440B7 /* VDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDLoginViewController.h; sourceTree = "<group>"; };
 		8968865516F93C4F00B440B7 /* VDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDLoginViewController.m; sourceTree = "<group>"; };
 		8968865616F93C4F00B440B7 /* VDLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VDLoginViewController.xib; sourceTree = "<group>"; };
-		8968865916F93DDE00B440B7 /* VDFirstPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDFirstPageViewController.h; sourceTree = "<group>"; };
-		8968865A16F93DDE00B440B7 /* VDFirstPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDFirstPageViewController.m; sourceTree = "<group>"; };
+		8968865916F93DDE00B440B7 /* VDStartupPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDStartupPageViewController.h; sourceTree = "<group>"; };
+		8968865A16F93DDE00B440B7 /* VDStartupPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDStartupPageViewController.m; sourceTree = "<group>"; };
 		8981229E16E8465E0028C05E /* Voir Dire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Voir Dire.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		898122A216E8465E0028C05E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		898122A416E8465E0028C05E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -150,8 +150,8 @@
 		8968864A16F9394600B440B7 /* AppFlow */ = {
 			isa = PBXGroup;
 			children = (
-				8968865916F93DDE00B440B7 /* VDFirstPageViewController.h */,
-				8968865A16F93DDE00B440B7 /* VDFirstPageViewController.m */,
+				8968865916F93DDE00B440B7 /* VDStartupPageViewController.h */,
+				8968865A16F93DDE00B440B7 /* VDStartupPageViewController.m */,
 			);
 			path = AppFlow;
 			sourceTree = "<group>";
@@ -300,7 +300,7 @@
 				8968863216F931C500B440B7 /* VDViewController.m in Sources */,
 				8968863516F9320E00B440B7 /* VDRootViewController.m in Sources */,
 				8968865716F93C4F00B440B7 /* VDLoginViewController.m in Sources */,
-				8968865B16F93DDE00B440B7 /* VDFirstPageViewController.m in Sources */,
+				8968865B16F93DDE00B440B7 /* VDStartupPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

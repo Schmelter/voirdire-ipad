@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--First Page View Controller-->
+        <!--Startup Page View Controller-->
         <scene sceneID="QwH-t8-FqM">
             <objects>
-                <viewController storyboardIdentifier="VDFirstPageViewController" id="rzL-uo-szj" customClass="VDFirstPageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VDStartupPageViewController" id="rzL-uo-szj" customClass="VDStartupPageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6IT-Xx-Un8">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -24,8 +24,8 @@
         </scene>
     </scenes>
     <classes>
-        <class className="VDFirstPageViewController" superclassName="VDViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VDFirstPageViewController.h"/>
+        <class className="VDStartupPageViewController" superclassName="VDViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VDStartupPageViewController.h"/>
         </class>
         <class className="VDViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/VDViewController.h"/>

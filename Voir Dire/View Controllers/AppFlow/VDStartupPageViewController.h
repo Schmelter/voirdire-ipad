@@ -1,5 +1,5 @@
 //
-//  VDFirstPageViewController.h
+//  VDStartupPageViewController.h
 //  Voir Dire
 //
 //  Created by Greg Schmelter on 3/19/13.
@@ -8,6 +8,6 @@
 
 #import "VDViewController.h"
 
-@interface VDFirstPageViewController : VDViewController
+@interface VDStartupPageViewController : VDViewController
 
 @end

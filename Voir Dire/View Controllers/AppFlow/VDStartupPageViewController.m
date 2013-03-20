@@ -1,18 +1,18 @@
 //
-//  VDFirstPageViewController.m
+//  VDStartupPageViewController.m
 //  Voir Dire
 //
 //  Created by Greg Schmelter on 3/19/13.
 //  Copyright (c) 2013 Voir Dire. All rights reserved.
 //
 
-#import "VDFirstPageViewController.h"
+#import "VDStartupPageViewController.h"
 
-@interface VDFirstPageViewController ()
+@interface VDStartupPageViewController ()
 
 @end
 
-@implementation VDFirstPageViewController
+@implementation VDStartupPageViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
