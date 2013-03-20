@@ -21,7 +21,7 @@
 {
     [super viewDidAppear:animated];
     
-    VDViewController *loginVC = [UIStoryboard storyboardWithName:@"Login" bundle:[NSBundle mainBundle]].instantiateInitialViewController;
+    VDViewController *loginVC = [UIStoryboard storyboardWithName:@"AppFlow" bundle:[NSBundle mainBundle]].instantiateInitialViewController;
     UINavigationController *loginNC = [[UINavigationController alloc] initWithRootViewController:loginVC];
     loginNC.navigationBarHidden = YES;
     
