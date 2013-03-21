@@ -21,6 +21,7 @@
 -(IBAction)passwordReturn:(id)sender;
 -(IBAction)backgroundTap:(id)sender;
 -(IBAction)newUserPushed:(id)sender;
+-(IBAction)loginPushed:(id)sender;
 
 @end
 
@@ -65,6 +66,10 @@
 
 -(IBAction)newUserPushed:(id)sender {
     
+}
+
+-(IBAction)loginPushed:(id)sender {
+    [self.mainViewController dismissLoginViewController];
 }
 
 #pragma mark ---

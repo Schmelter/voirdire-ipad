@@ -10,6 +10,8 @@
 
 @interface VDStartupPageViewController ()
 
+@property (nonatomic, readwrite, weak) IBOutlet UINavigationController *navigationController;
+
 @end
 
 @implementation VDStartupPageViewController
@@ -27,6 +29,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([@"EmbedUINavigationControllerSegue" isEqualToString:segue.identifier]) {
+        self.navigationController = segue.destinationViewController;
+    }
 }
 
 @end

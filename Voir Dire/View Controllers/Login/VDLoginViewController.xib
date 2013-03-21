@@ -133,17 +133,16 @@
 							<object class="IBUIButton" id="837935134">
 								<reference key="NSNextResponder" ref="864866596"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{194, 172}, {124, 44}}</string>
+								<string key="NSFrame">{{262, 176}, {230, 44}}</string>
 								<reference key="NSSuperview" ref="864866596"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<int key="IBUIContentHorizontalAlignment">0</int>
 								<int key="IBUIContentVerticalAlignment">0</int>
 								<int key="IBUIButtonType">1</int>
-								<string key="IBUINormalTitle">New User</string>
+								<string key="IBUINormalTitle">Login</string>
 								<object class="NSColor" key="IBUIHighlightedTitleColor" id="562595208">
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MQA</bytes>
@@ -152,19 +151,42 @@
 									<int key="NSColorSpace">1</int>
 									<bytes key="NSRGB">MC4xOTYwNzg0MzE0IDAuMzA5ODAzOTIxNiAwLjUyMTU2ODYyNzUAA</bytes>
 								</object>
-								<object class="NSColor" key="IBUINormalTitleShadowColor">
+								<object class="NSColor" key="IBUINormalTitleShadowColor" id="752895833">
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MC41AA</bytes>
 								</object>
-								<object class="IBUIFontDescription" key="IBUIFontDescription">
+								<object class="IBUIFontDescription" key="IBUIFontDescription" id="207403276">
 									<int key="type">2</int>
 									<int key="size">2</int>
 								</object>
-								<object class="NSFont" key="IBUIFont">
+								<object class="NSFont" key="IBUIFont" id="153104311">
 									<string key="NSName">Helvetica-Bold</string>
 									<double key="NSSize">18</double>
 									<int key="NSfFlags">16</int>
 								</object>
+							</object>
+							<object class="IBUIButton" id="408619674">
+								<reference key="NSNextResponder" ref="864866596"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{20, 176}, {234, 44}}</string>
+								<reference key="NSSuperview" ref="864866596"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="837935134"/>
+								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<bool key="IBUIOpaque">NO</bool>
+								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+								<int key="IBUIContentHorizontalAlignment">0</int>
+								<int key="IBUIContentVerticalAlignment">0</int>
+								<int key="IBUIButtonType">1</int>
+								<string key="IBUINormalTitle">New User</string>
+								<reference key="IBUIHighlightedTitleColor" ref="562595208"/>
+								<object class="NSColor" key="IBUINormalTitleColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC4xOTYwNzg0MzE0IDAuMzA5ODAzOTIxNiAwLjUyMTU2ODYyNzUAA</bytes>
+								</object>
+								<reference key="IBUINormalTitleShadowColor" ref="752895833"/>
+								<reference key="IBUIFontDescription" ref="207403276"/>
+								<reference key="IBUIFont" ref="153104311"/>
 							</object>
 							<object class="IBUITextField" id="123449420">
 								<reference key="NSNextResponder" ref="864866596"/>
@@ -213,7 +235,7 @@
 								<string key="NSFrame">{{262, 125}, {230, 30}}</string>
 								<reference key="NSSuperview" ref="864866596"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="837935134"/>
+								<reference key="NSNextKeyView" ref="408619674"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -255,7 +277,7 @@
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
-					<bytes key="NSWhite">MCAwLjQAA</bytes>
+					<bytes key="NSWhite">MCAwLjcAA</bytes>
 				</object>
 				<array key="IBUIGestureRecognizers" id="0"/>
 				<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
@@ -348,12 +370,12 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">newUserPushed:</string>
+						<string key="label">loginPushed:</string>
 						<reference key="source" ref="837935134"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">67</int>
+					<int key="connectionID">78</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -370,6 +392,15 @@
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">73</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">newUserPushed:</string>
+						<reference key="source" ref="408619674"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">77</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -405,10 +436,11 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="734132813"/>
 							<reference ref="123449420"/>
-							<reference ref="837935134"/>
 							<reference ref="756562362"/>
 							<reference ref="289851972"/>
 							<reference ref="123908937"/>
+							<reference ref="408619674"/>
+							<reference ref="837935134"/>
 						</array>
 						<reference key="parent" ref="653071967"/>
 					</object>
@@ -447,6 +479,11 @@
 						<reference key="object" ref="167658786"/>
 						<reference key="parent" ref="0"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">76</int>
+						<reference key="object" ref="408619674"/>
+						<reference key="parent" ref="864866596"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -462,6 +499,8 @@
 				<real value="0.0" key="5.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="7.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="76.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<real value="0.0" key="76.IBUIButtonInspectorSelectedStateConfigurationMetadataKey"/>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="9.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
@@ -469,7 +508,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">73</int>
+			<int key="maxID">78</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -478,6 +517,7 @@
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="backgroundTap:">id</string>
+						<string key="loginPushed:">id</string>
 						<string key="newUserPushed:">id</string>
 						<string key="passwordReturn:">id</string>
 						<string key="usernameReturn:">id</string>
@@ -485,6 +525,10 @@
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="backgroundTap:">
 							<string key="name">backgroundTap:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="loginPushed:">
+							<string key="name">loginPushed:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="newUserPushed:">
