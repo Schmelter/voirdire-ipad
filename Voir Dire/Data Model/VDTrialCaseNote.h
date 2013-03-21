@@ -7,14 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-typedef NS_ENUM(NSInteger, VDTrialCaseNote_TrialPhase) {
-    VDTrialCaseNote_TrialPhase_VoirDire,
-    VDTrialCaseNote_TrialPhase_OpeningArgs,
-    VDTrialCaseNote_TrialPhase_EvidencePresentation,
-    VDTrialCaseNote_TrialPhase_ClosingArgs,
-    VDTrialCaseNote_TrialPhase_Other
-};
+#import "VDDataModelEnums.h"
 
 @interface VDTrialCaseNote : NSObject {
     @private
@@ -22,7 +15,7 @@ typedef NS_ENUM(NSInteger, VDTrialCaseNote_TrialPhase) {
 
 @property (nonatomic, readwrite) NSInteger trialCaseNoteID, trialCaseID, lawFirmUserID;
 @property (nonatomic, readwrite, strong) NSDate *dateTimeStamp;
-@property (nonatomic, readwrite) VDTrialCaseNote_TrialPhase trialPhase;
+@property (nonatomic, readwrite) VDTrialPhase trialPhase;
 @property (nonatomic, readwrite, strong) NSString *notes;
 
 @end

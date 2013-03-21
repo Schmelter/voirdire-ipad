@@ -12,6 +12,8 @@
 		890ABC0A16FAAA7D00BA4B08 /* VDTrialCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABC0916FAAA7D00BA4B08 /* VDTrialCase.m */; };
 		890ABC0D16FAABC700BA4B08 /* VDTrialCaseNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABC0C16FAABC700BA4B08 /* VDTrialCaseNote.m */; };
 		890ABC1016FAAF2800BA4B08 /* VDLawFirmUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABC0F16FAAF2800BA4B08 /* VDLawFirmUser.m */; };
+		890ABC1416FAB38300BA4B08 /* VDCurrentLawFirmUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABC1316FAB38300BA4B08 /* VDCurrentLawFirmUserManager.m */; };
+		890ABC1716FAB60C00BA4B08 /* VDJuror.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABC1616FAB60C00BA4B08 /* VDJuror.m */; };
 		8968861516F92E7D00B440B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968861216F92E7D00B440B7 /* main.m */; };
 		8968861B16F92E9200B440B7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8968861816F92E9200B440B7 /* Default-568h@2x.png */; };
 		8968861C16F92E9200B440B7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8968861916F92E9200B440B7 /* Default.png */; };
@@ -43,6 +45,11 @@
 		890ABC0C16FAABC700BA4B08 /* VDTrialCaseNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDTrialCaseNote.m; sourceTree = "<group>"; };
 		890ABC0E16FAAF2800BA4B08 /* VDLawFirmUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDLawFirmUser.h; sourceTree = "<group>"; };
 		890ABC0F16FAAF2800BA4B08 /* VDLawFirmUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDLawFirmUser.m; sourceTree = "<group>"; };
+		890ABC1216FAB38300BA4B08 /* VDCurrentLawFirmUserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDCurrentLawFirmUserManager.h; sourceTree = "<group>"; };
+		890ABC1316FAB38300BA4B08 /* VDCurrentLawFirmUserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDCurrentLawFirmUserManager.m; sourceTree = "<group>"; };
+		890ABC1516FAB60B00BA4B08 /* VDJuror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDJuror.h; sourceTree = "<group>"; };
+		890ABC1616FAB60C00BA4B08 /* VDJuror.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDJuror.m; sourceTree = "<group>"; };
+		890ABC1816FAB6AE00BA4B08 /* VDDataModelEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDDataModelEnums.h; sourceTree = "<group>"; };
 		8968861216F92E7D00B440B7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Resources/main.m; sourceTree = "<group>"; };
 		8968861316F92E7D00B440B7 /* Voir Dire-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Voir Dire-Info.plist"; path = "Resources/Voir Dire-Info.plist"; sourceTree = "<group>"; };
 		8968861416F92E7D00B440B7 /* Voir Dire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Voir Dire-Prefix.pch"; path = "Resources/Voir Dire-Prefix.pch"; sourceTree = "<group>"; };
@@ -96,6 +103,15 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		890ABC1116FAB36F00BA4B08 /* Data Managers */ = {
+			isa = PBXGroup;
+			children = (
+				890ABC1216FAB38300BA4B08 /* VDCurrentLawFirmUserManager.h */,
+				890ABC1316FAB38300BA4B08 /* VDCurrentLawFirmUserManager.m */,
+			);
+			path = "Data Managers";
+			sourceTree = "<group>";
+		};
 		8968861716F92E9200B440B7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +141,9 @@
 				890ABC0C16FAABC700BA4B08 /* VDTrialCaseNote.m */,
 				890ABC0E16FAAF2800BA4B08 /* VDLawFirmUser.h */,
 				890ABC0F16FAAF2800BA4B08 /* VDLawFirmUser.m */,
+				890ABC1516FAB60B00BA4B08 /* VDJuror.h */,
+				890ABC1616FAB60C00BA4B08 /* VDJuror.m */,
+				890ABC1816FAB6AE00BA4B08 /* VDDataModelEnums.h */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -237,6 +256,7 @@
 				8968862416F92EE400B440B7 /* Storyboards */,
 				8968862316F92EDC00B440B7 /* Protocols */,
 				8968861F16F92ECE00B440B7 /* Data Model */,
+				890ABC1116FAB36F00BA4B08 /* Data Managers */,
 				8968861E16F92EBC00B440B7 /* Categories */,
 				8968861716F92E9200B440B7 /* Images */,
 				898122B316E8465E0028C05E /* VDAppDelegate.h */,
@@ -339,6 +359,8 @@
 				890ABC0A16FAAA7D00BA4B08 /* VDTrialCase.m in Sources */,
 				890ABC0D16FAABC700BA4B08 /* VDTrialCaseNote.m in Sources */,
 				890ABC1016FAAF2800BA4B08 /* VDLawFirmUser.m in Sources */,
+				890ABC1416FAB38300BA4B08 /* VDCurrentLawFirmUserManager.m in Sources */,
+				890ABC1716FAB60C00BA4B08 /* VDJuror.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

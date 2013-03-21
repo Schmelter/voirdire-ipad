@@ -7,28 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-typedef NS_ENUM(NSInteger, VDTrialCase_CaseForWhichParty) {
-    VDTrialCase_CaseForWhichParty_Plaintiff,
-    VDTrialCase_CaseForWhichParty_Defendant,
-    VDTrialCase_CaseForWhichParty_Multiple,
-    VDTrialCase_CaseForWhichParty_NA
-};
-
-typedef NS_ENUM(NSInteger, VDTrialCase_LitigationCategory) {
-    VDTrialCase_LitigationCategory_Antitrust,
-    VDTrialCase_LitigationCategory_Securities,
-    VDTrialCase_LitigationCategory_Consumer,
-    VDTrialCase_LitigationCategory_Other,
-    VDTrialCase_LitigationCategory_NA
-};
-
-typedef NS_ENUM(NSInteger, VDTrialCase_VerdictInFavorOf) {
-    VDTrialCase_VerdictInFavorOf_Plaintiff,
-    VDTrialCase_VerdictInFavorOf_Defendant,
-    VDTrialCase_VerdictInFavorOf_Multiple,
-    VDTrialCase_VerdictInFavorOf_NA
-};
+#import "VDDataModelEnums.h"
 
 @interface VDTrialCase : NSObject {
     @private
@@ -39,9 +18,9 @@ typedef NS_ENUM(NSInteger, VDTrialCase_VerdictInFavorOf) {
 @property (nonatomic, readwrite) NSInteger trialCaseID, juryPoolSize, juryBoxSize, peremptoryStrikesAllowed;
 @property (nonatomic, readwrite) BOOL isClassAction, isUserAllowed;
 @property (nonatomic, readwrite) float verdictAmount;
-@property (nonatomic, readwrite) VDTrialCase_CaseForWhichParty caseForWhichParty;
-@property (nonatomic, readwrite) VDTrialCase_LitigationCategory litigationCategory;
-@property (nonatomic, readwrite) VDTrialCase_VerdictInFavorOf verdictInFavorOf;
+@property (nonatomic, readwrite) VDCaseForWhichParty caseForWhichParty;
+@property (nonatomic, readwrite) VDLitigationCategory litigationCategory;
+@property (nonatomic, readwrite) VDVerdictInFavorOf verdictInFavorOf;
 
 
 @end

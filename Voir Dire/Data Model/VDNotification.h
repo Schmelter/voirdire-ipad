@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface VDNotification : NSObject
+@interface VDNotification : NSObject {
+    @private
+}
+
+@property (nonatomic, readwrite) NSInteger notificationID;
+@property (nonatomic, readwrite, strong) NSString *notification;
+@property (nonatomic, readwrite, strong) NSDate *date;
 
 @end

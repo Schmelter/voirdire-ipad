@@ -13,9 +13,9 @@
 -(id)init {
     self = [super init];
     if (self) {
-        self.gender = VDLawFirmUser_Gender_Other;
-        self.race = VDLawFirmUser_Race_Other;
-        self.primaryRole = VDLawFirmUser_PrimaryRole_Other;
+        self.gender = VDGender_Other;
+        self.race = VDRace_Other;
+        self.primaryRole = VDPrimaryRole_Other;
     }
     return self;
 }

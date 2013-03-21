@@ -13,9 +13,9 @@
 -(id)init {
     self = [super init];
     if (self) {
-        self.caseForWhichParty = VDTrialCase_CaseForWhichParty_NA;
-        self.litigationCategory = VDTrialCase_LitigationCategory_NA;
-        self.verdictInFavorOf = VDTrialCase_VerdictInFavorOf_NA;
+        self.caseForWhichParty = VDCaseForWhichParty_NA;
+        self.litigationCategory = VDLitigationCategory_NA;
+        self.verdictInFavorOf = VDVerdictInFavorOf_NA;
     }
     return self;
 }

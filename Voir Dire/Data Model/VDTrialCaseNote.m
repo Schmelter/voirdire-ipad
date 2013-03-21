@@ -13,7 +13,7 @@
 -(id)init {
     self = [super init];
     if (self) {
-        self.trialPhase = VDTrialCaseNote_TrialPhase_Other;
+        self.trialPhase = VDTrialPhase_Other;
     }
     return self;
 }
