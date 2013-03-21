@@ -15,6 +15,7 @@
 		890ABC1416FAB38300BA4B08 /* VDCurrentLawFirmUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABC1316FAB38300BA4B08 /* VDCurrentLawFirmUserManager.m */; };
 		890ABC1716FAB60C00BA4B08 /* VDJuror.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABC1616FAB60C00BA4B08 /* VDJuror.m */; };
 		890ABC1B16FABA0600BA4B08 /* VDNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABC1A16FABA0600BA4B08 /* VDNotificationManager.m */; };
+		890ABC1E16FABC0100BA4B08 /* VDTrialCaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABC1D16FABC0100BA4B08 /* VDTrialCaseManager.m */; };
 		8968861516F92E7D00B440B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968861216F92E7D00B440B7 /* main.m */; };
 		8968861B16F92E9200B440B7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8968861816F92E9200B440B7 /* Default-568h@2x.png */; };
 		8968861C16F92E9200B440B7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8968861916F92E9200B440B7 /* Default.png */; };
@@ -53,6 +54,8 @@
 		890ABC1816FAB6AE00BA4B08 /* VDDataModelEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDDataModelEnums.h; sourceTree = "<group>"; };
 		890ABC1916FABA0600BA4B08 /* VDNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDNotificationManager.h; sourceTree = "<group>"; };
 		890ABC1A16FABA0600BA4B08 /* VDNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDNotificationManager.m; sourceTree = "<group>"; };
+		890ABC1C16FABC0100BA4B08 /* VDTrialCaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDTrialCaseManager.h; sourceTree = "<group>"; };
+		890ABC1D16FABC0100BA4B08 /* VDTrialCaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDTrialCaseManager.m; sourceTree = "<group>"; };
 		8968861216F92E7D00B440B7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Resources/main.m; sourceTree = "<group>"; };
 		8968861316F92E7D00B440B7 /* Voir Dire-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Voir Dire-Info.plist"; path = "Resources/Voir Dire-Info.plist"; sourceTree = "<group>"; };
 		8968861416F92E7D00B440B7 /* Voir Dire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Voir Dire-Prefix.pch"; path = "Resources/Voir Dire-Prefix.pch"; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 				890ABC1316FAB38300BA4B08 /* VDCurrentLawFirmUserManager.m */,
 				890ABC1916FABA0600BA4B08 /* VDNotificationManager.h */,
 				890ABC1A16FABA0600BA4B08 /* VDNotificationManager.m */,
+				890ABC1C16FABC0100BA4B08 /* VDTrialCaseManager.h */,
+				890ABC1D16FABC0100BA4B08 /* VDTrialCaseManager.m */,
 			);
 			path = "Data Managers";
 			sourceTree = "<group>";
@@ -367,6 +372,7 @@
 				890ABC1416FAB38300BA4B08 /* VDCurrentLawFirmUserManager.m in Sources */,
 				890ABC1716FAB60C00BA4B08 /* VDJuror.m in Sources */,
 				890ABC1B16FABA0600BA4B08 /* VDNotificationManager.m in Sources */,
+				890ABC1E16FABC0100BA4B08 /* VDTrialCaseManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

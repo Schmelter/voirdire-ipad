@@ -22,5 +22,7 @@
 @property (nonatomic, readwrite) VDLitigationCategory litigationCategory;
 @property (nonatomic, readwrite) VDVerdictInFavorOf verdictInFavorOf;
 
+@property (nonatomic, readwrite) NSArray *trialCaseNotes;
+
 
 @end
