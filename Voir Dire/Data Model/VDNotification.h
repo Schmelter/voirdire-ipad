@@ -15,5 +15,6 @@
 @property (nonatomic, readwrite) NSInteger notificationID;
 @property (nonatomic, readwrite, strong) NSString *notification;
 @property (nonatomic, readwrite, strong) NSDate *date;
+@property (nonatomic, readwrite) BOOL hasBeenRead;
 
 @end
