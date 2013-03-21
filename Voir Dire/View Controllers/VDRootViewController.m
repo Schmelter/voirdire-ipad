@@ -7,10 +7,14 @@
 //
 
 #import "VDRootViewController.h"
+#import "VDStartupPageViewController.h"
 #import "VDLoginViewController.h"
+
+static VDRootViewController *instance = nil;
 
 @interface VDRootViewController ()
 
+@property (nonatomic, readwrite, strong) VDStartupPageViewController *startupVC;
 @property (nonatomic, readwrite, strong) VDLoginViewController *loginVC;
 
 @end
@@ -21,9 +25,13 @@
 -(id)init {
     self = [super init];
     if (self) {
-        self.loginVC = nil;
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            self.loginVC = nil;
+            instance = self;
+        });
     }
-    return self;
+    return instance;
 }
 
 #pragma mark - View lifecycle
@@ -32,22 +40,25 @@
 {
     [super viewDidAppear:animated];
     
-    VDViewController *loginVC = [UIStoryboard storyboardWithName:@"AppFlow" bundle:[NSBundle mainBundle]].instantiateInitialViewController;
-    UINavigationController *loginNC = [[UINavigationController alloc] initWithRootViewController:loginVC];
-    loginNC.navigationBarHidden = YES;
+    self.startupVC = [UIStoryboard storyboardWithName:@"AppFlow" bundle:[NSBundle mainBundle]].instantiateInitialViewController;
+    self.startupVC.rootVC = self;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        [self addChildViewController:loginNC];
-        [self.view addSubview:loginNC.view];
-        [loginNC didMoveToParentViewController:self];
+        [self addChildViewController:self.startupVC];
+        [self.view addSubview:self.startupVC.view];
+        [self.startupVC didMoveToParentViewController:self];
         //[self presentViewController:loginNC animated:NO completion:nil];
     });
     
     
     
     // Check if the user is logged in.  If not, then ask them to log in here.
+    [self presentLoginViewController];
+}
+
+-(void)presentLoginViewController {
     self.loginVC = [[VDLoginViewController alloc] initWithNibName:@"VDLoginViewController" bundle:nil];
     self.loginVC.rootViewController = self;
     [self addChildViewController:self.loginVC];
@@ -56,6 +67,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+    
 }
 
 -(void)dismissLoginViewController {

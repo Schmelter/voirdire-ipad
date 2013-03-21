@@ -8,8 +8,9 @@
 
 #import "VDViewController.h"
 
-@interface VDRootViewController : VDViewController
+@interface VDRootViewController : UIViewController
 
+-(void)presentLoginViewController;
 -(void)dismissLoginViewController;
 
 @end

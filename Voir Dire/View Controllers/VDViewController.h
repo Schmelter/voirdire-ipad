@@ -13,6 +13,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class VDStartupPageViewController;
+
 @interface VDViewController : UIViewController
+
+@property (nonatomic, readwrite, weak) VDStartupPageViewController *startupViewController;
 
 @end

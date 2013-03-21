@@ -7,7 +7,10 @@
 //
 
 #import "VDViewController.h"
+#import "VDRootViewController.h"
 
-@interface VDStartupPageViewController : VDViewController
+@interface VDStartupPageViewController : UIViewController
+
+@property (nonatomic, readwrite, weak) VDRootViewController *rootVC;
 
 @end

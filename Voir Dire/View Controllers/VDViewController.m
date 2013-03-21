@@ -7,7 +7,7 @@
 //
 
 #import "VDViewController.h"
-#import "VDLoginViewController.h"
+#import "VDStartupPageViewController.h"
 
 @interface VDViewController ()
 
