@@ -32,7 +32,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.mainViewController = nil;
+        self.rootViewController = nil;
     }
     return self;
 }
@@ -69,7 +69,7 @@
 }
 
 -(IBAction)loginPushed:(id)sender {
-    [self.mainViewController dismissLoginViewController];
+    [self.rootViewController dismissLoginViewController];
 }
 
 #pragma mark ---
@@ -80,7 +80,7 @@
         [_password becomeFirstResponder];
     } else if (_password == textField) {
         [_password resignFirstResponder];
-        [self.mainViewController dismissLoginViewController];
+        [self.rootViewController dismissLoginViewController];
     }
     return YES;
 }

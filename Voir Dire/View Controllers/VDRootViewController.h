@@ -10,4 +10,6 @@
 
 @interface VDRootViewController : VDViewController
 
+-(void)dismissLoginViewController;
+
 @end

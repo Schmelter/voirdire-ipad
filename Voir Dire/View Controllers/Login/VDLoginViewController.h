@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Voir Dire. All rights reserved.
 //
 
-#import "VDViewController.h"
+#import "VDRootViewController.h"
 
 @interface VDLoginViewController : UIViewController <UITextFieldDelegate>
 
-@property (nonatomic, readwrite, weak) VDViewController *mainViewController;
+@property (nonatomic, readwrite, weak) VDRootViewController *rootViewController;
 
 @end
