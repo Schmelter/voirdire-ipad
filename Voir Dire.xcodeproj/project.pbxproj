@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		890ABBFE16FAA94E00BA4B08 /* VDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABBFD16FAA94E00BA4B08 /* VDHomeViewController.m */; };
-		890ABC0416FAA9AB00BA4B08 /* VDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABC0316FAA9AB00BA4B08 /* VDUser.m */; };
 		890ABC0716FAA9B800BA4B08 /* VDNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABC0616FAA9B800BA4B08 /* VDNotification.m */; };
 		890ABC0A16FAAA7D00BA4B08 /* VDTrialCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABC0916FAAA7D00BA4B08 /* VDTrialCase.m */; };
 		890ABC0D16FAABC700BA4B08 /* VDTrialCaseNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABC0C16FAABC700BA4B08 /* VDTrialCaseNote.m */; };
+		890ABC1016FAAF2800BA4B08 /* VDLawFirmUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABC0F16FAAF2800BA4B08 /* VDLawFirmUser.m */; };
 		8968861516F92E7D00B440B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968861216F92E7D00B440B7 /* main.m */; };
 		8968861B16F92E9200B440B7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8968861816F92E9200B440B7 /* Default-568h@2x.png */; };
 		8968861C16F92E9200B440B7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8968861916F92E9200B440B7 /* Default.png */; };
@@ -35,14 +35,14 @@
 /* Begin PBXFileReference section */
 		890ABBFC16FAA94E00BA4B08 /* VDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDHomeViewController.h; sourceTree = "<group>"; };
 		890ABBFD16FAA94E00BA4B08 /* VDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDHomeViewController.m; sourceTree = "<group>"; };
-		890ABC0216FAA9AB00BA4B08 /* VDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDUser.h; sourceTree = "<group>"; };
-		890ABC0316FAA9AB00BA4B08 /* VDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDUser.m; sourceTree = "<group>"; };
 		890ABC0516FAA9B800BA4B08 /* VDNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDNotification.h; sourceTree = "<group>"; };
 		890ABC0616FAA9B800BA4B08 /* VDNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDNotification.m; sourceTree = "<group>"; };
 		890ABC0816FAAA7D00BA4B08 /* VDTrialCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDTrialCase.h; sourceTree = "<group>"; };
 		890ABC0916FAAA7D00BA4B08 /* VDTrialCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDTrialCase.m; sourceTree = "<group>"; };
 		890ABC0B16FAABC700BA4B08 /* VDTrialCaseNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDTrialCaseNote.h; sourceTree = "<group>"; };
 		890ABC0C16FAABC700BA4B08 /* VDTrialCaseNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDTrialCaseNote.m; sourceTree = "<group>"; };
+		890ABC0E16FAAF2800BA4B08 /* VDLawFirmUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDLawFirmUser.h; sourceTree = "<group>"; };
+		890ABC0F16FAAF2800BA4B08 /* VDLawFirmUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDLawFirmUser.m; sourceTree = "<group>"; };
 		8968861216F92E7D00B440B7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Resources/main.m; sourceTree = "<group>"; };
 		8968861316F92E7D00B440B7 /* Voir Dire-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Voir Dire-Info.plist"; path = "Resources/Voir Dire-Info.plist"; sourceTree = "<group>"; };
 		8968861416F92E7D00B440B7 /* Voir Dire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Voir Dire-Prefix.pch"; path = "Resources/Voir Dire-Prefix.pch"; sourceTree = "<group>"; };
@@ -117,14 +117,14 @@
 			isa = PBXGroup;
 			children = (
 				8968862016F92ECE00B440B7 /* Voir_Dire.xcdatamodeld */,
-				890ABC0216FAA9AB00BA4B08 /* VDUser.h */,
-				890ABC0316FAA9AB00BA4B08 /* VDUser.m */,
 				890ABC0516FAA9B800BA4B08 /* VDNotification.h */,
 				890ABC0616FAA9B800BA4B08 /* VDNotification.m */,
 				890ABC0816FAAA7D00BA4B08 /* VDTrialCase.h */,
 				890ABC0916FAAA7D00BA4B08 /* VDTrialCase.m */,
 				890ABC0B16FAABC700BA4B08 /* VDTrialCaseNote.h */,
 				890ABC0C16FAABC700BA4B08 /* VDTrialCaseNote.m */,
+				890ABC0E16FAAF2800BA4B08 /* VDLawFirmUser.h */,
+				890ABC0F16FAAF2800BA4B08 /* VDLawFirmUser.m */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -335,10 +335,10 @@
 				8968865716F93C4F00B440B7 /* VDLoginViewController.m in Sources */,
 				8968865B16F93DDE00B440B7 /* VDStartupPageViewController.m in Sources */,
 				890ABBFE16FAA94E00BA4B08 /* VDHomeViewController.m in Sources */,
-				890ABC0416FAA9AB00BA4B08 /* VDUser.m in Sources */,
 				890ABC0716FAA9B800BA4B08 /* VDNotification.m in Sources */,
 				890ABC0A16FAAA7D00BA4B08 /* VDTrialCase.m in Sources */,
 				890ABC0D16FAABC700BA4B08 /* VDTrialCaseNote.m in Sources */,
+				890ABC1016FAAF2800BA4B08 /* VDLawFirmUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

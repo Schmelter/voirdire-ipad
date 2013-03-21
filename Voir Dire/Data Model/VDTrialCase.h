@@ -8,27 +8,27 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum VDTrialCase_CaseForWhichParty {
-    VDTrialCase_CaseForWhichParty_Plaintiff = 1,
-    VDTrialCase_CaseForWhichParty_Defendant = 2,
-    VDTrialCase_CaseForWhichParty_Multiple = 3,
-    VDTrialCase_CaseForWhichParty_NA = 0
-} VDTrialCase_CaseForWhichParty;
+typedef NS_ENUM(NSInteger, VDTrialCase_CaseForWhichParty) {
+    VDTrialCase_CaseForWhichParty_Plaintiff,
+    VDTrialCase_CaseForWhichParty_Defendant,
+    VDTrialCase_CaseForWhichParty_Multiple,
+    VDTrialCase_CaseForWhichParty_NA
+};
 
-typedef enum VDTrialCase_LitigationCategory {
-    VDTrialCase_LitigationCategory_Antitrust = 1,
-    VDTrialCase_LitigationCategory_Securities = 2,
-    VDTrialCase_LitigationCategory_Consumer = 3,
-    VDTrialCase_LitigationCategory_Other = 4,
-    VDTrialCase_LitigationCategory_NA = 0
-} VDTrialCase_LitigationCategory;
+typedef NS_ENUM(NSInteger, VDTrialCase_LitigationCategory) {
+    VDTrialCase_LitigationCategory_Antitrust,
+    VDTrialCase_LitigationCategory_Securities,
+    VDTrialCase_LitigationCategory_Consumer,
+    VDTrialCase_LitigationCategory_Other,
+    VDTrialCase_LitigationCategory_NA
+};
 
-typedef enum VDTrialCase_VerdictInFavorOf {
-    VDTrialCase_VerdictInFavorOf_Plaintiff = 1,
-    VDTrialCase_VerdictInFavorOf_Defendant = 2,
-    VDTrialCase_VerdictInFavorOf_Multiple = 3,
-    VDTrialCase_VerdictInFavorOf_NA = 0
-} VDTrialCase_VerdictInFavorOf;
+typedef NS_ENUM(NSInteger, VDTrialCase_VerdictInFavorOf) {
+    VDTrialCase_VerdictInFavorOf_Plaintiff,
+    VDTrialCase_VerdictInFavorOf_Defendant,
+    VDTrialCase_VerdictInFavorOf_Multiple,
+    VDTrialCase_VerdictInFavorOf_NA
+};
 
 @interface VDTrialCase : NSObject {
     @private

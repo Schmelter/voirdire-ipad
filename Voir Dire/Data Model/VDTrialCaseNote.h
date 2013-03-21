@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum VDTrialCaseNote_TrialPhase {
-    VDTrialCaseNote_TrialPhase_VoirDire = 1,
-    VDTrialCaseNote_TrialPhase_OpeningArgs = 2,
-    VDTrialCaseNote_TrialPhase_EvidencePresentation = 3,
-    VDTrialCaseNote_TrialPhase_ClosingArgs = 4,
-    VDTrialCaseNote_TrialPhase_Other = 0
-} VDTrialCaseNote_TrialPhase;
+typedef NS_ENUM(NSInteger, VDTrialCaseNote_TrialPhase) {
+    VDTrialCaseNote_TrialPhase_VoirDire,
+    VDTrialCaseNote_TrialPhase_OpeningArgs,
+    VDTrialCaseNote_TrialPhase_EvidencePresentation,
+    VDTrialCaseNote_TrialPhase_ClosingArgs,
+    VDTrialCaseNote_TrialPhase_Other
+};
 
 @interface VDTrialCaseNote : NSObject {
     @private
