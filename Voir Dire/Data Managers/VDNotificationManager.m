@@ -16,7 +16,7 @@ static VDNotificationManager *instance = nil;
     return nil;
 }
 
-+(void)pendingNotificationsWithSuccessHandler:(void(^)(NSArray*))success withFailure:(void(^)(NSError*))failure {
++(void)pendingNotificationsForUser:(VDLawFirmUser*)user WithSuccessHandler:(void(^)(NSArray*))success withFailure:(void(^)(NSError*))failure {
     static NSMutableArray *notifications = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

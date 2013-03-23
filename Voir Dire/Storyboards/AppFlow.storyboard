@@ -133,7 +133,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="824" height="558"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="95" sectionHeaderHeight="22" sectionFooterHeight="22" id="fqq-bV-VYQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="95" sectionHeaderHeight="22" sectionFooterHeight="22" id="fqq-bV-VYQ">
                                 <rect key="frame" x="0.0" y="0.0" width="824" height="558"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -234,6 +234,14 @@
                                     <segue destination="d07-FH-Zzu" kind="embed" identifier="EmbedVDCaseDetailsViewControllerSegue" id="ZoU-NS-Vgf"/>
                                 </connections>
                             </containerView>
+                            <containerView contentMode="scaleToFill" id="ZC5-ea-ofh">
+                                <rect key="frame" x="0.0" y="558" width="824" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="lrg-gX-9O2" kind="embed" identifier="EmbedVDNotificationListViewControllerSegue" id="t2a-hT-0B9"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -244,6 +252,9 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="view" destination="Gt5-68-8Jp" id="pnk-C3-32F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKA-Jf-OyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -477,11 +488,72 @@
                         <outlet property="trialCounty" destination="DDf-Ba-sGC" id="9Bo-Gl-hQh"/>
                         <outlet property="trialJudge" destination="QuX-yB-25u" id="aMQ-ea-GfP"/>
                         <outlet property="verdictDt" destination="mc8-PL-JEf" id="cov-yL-sih"/>
+                        <outlet property="view" destination="8Dy-wP-EOO" id="xLq-Cd-h6J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ueD-Qa-3pS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3850" y="-233"/>
+        </scene>
+        <!--Notification List View Controller-->
+        <scene sceneID="Ktb-3V-giN">
+            <objects>
+                <viewController storyboardIdentifier="VDNotificationListViewController" id="lrg-gX-9O2" customClass="VDNotificationListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="5gY-Qy-Lop">
+                        <rect key="frame" x="0.0" y="0.0" width="824" height="150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="VDNotificationCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="VDNotificationCell" id="Qfb-gX-EWe" customClass="VDNotificationCell">
+                                <rect key="frame" x="0.0" y="22" width="824" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="824" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Notification Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0wi-Bz-pnl">
+                                            <rect key="frame" x="13" y="0.0" width="368" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Notification Text" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2qM-WF-35y">
+                                            <rect key="frame" x="13" y="18" width="791" height="41"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="Dyy-cE-Eqp">
+                                            <rect key="frame" x="774" y="15" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="hasBeenReadImage" destination="Dyy-cE-Eqp" id="1D2-4k-agr"/>
+                                    <outlet property="notificationDate" destination="0wi-Bz-pnl" id="SM4-ZA-M9e"/>
+                                    <outlet property="notificationText" destination="2qM-WF-35y" id="zr9-h0-YIb"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="lrg-gX-9O2" id="3QL-vN-8sA"/>
+                            <outlet property="delegate" destination="lrg-gX-9O2" id="L1J-nT-ZaA"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="tableView" destination="5gY-Qy-Lop" id="Gon-Ib-rnS"/>
+                        <outlet property="view" destination="5gY-Qy-Lop" id="NPc-4b-hzm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8kk-Rr-zBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2555" y="565"/>
         </scene>
     </scenes>
     <classes>
@@ -524,6 +596,22 @@
             <relationships>
                 <relationship kind="outlet" name="caseDetailsVC" candidateClass="VDCaseDetailsViewController"/>
                 <relationship kind="outlet" name="caseListVC" candidateClass="VDCaseListViewController"/>
+                <relationship kind="outlet" name="notificationListVC" candidateClass="VDNotificationListViewController"/>
+            </relationships>
+        </class>
+        <class className="VDNotificationCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VDNotificationCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="hasBeenReadImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="notificationDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="notificationText" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="VDNotificationListViewController" superclassName="VDViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VDNotificationListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="notifications" candidateClass="NSArray"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
         </class>
         <class className="VDStartupPageViewController" superclassName="UIViewController">

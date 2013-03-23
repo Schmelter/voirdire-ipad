@@ -20,6 +20,10 @@
 		8932B91A16FE549C00E9461C /* VDCaseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8932B91916FE549C00E9461C /* VDCaseListViewController.m */; };
 		8932B91E16FE577500E9461C /* VDCaseDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8932B91D16FE577500E9461C /* VDCaseDetailsViewController.m */; };
 		8932B92116FE596600E9461C /* VDCaseListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8932B92016FE596600E9461C /* VDCaseListCell.m */; };
+		8932B92516FE6BFF00E9461C /* VDNotificationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8932B92416FE6BFF00E9461C /* VDNotificationListViewController.m */; };
+		8932B92816FE6D3400E9461C /* VDNotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8932B92716FE6D3400E9461C /* VDNotificationCell.m */; };
+		8932B92B16FE728100E9461C /* radio_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 8932B92916FE728100E9461C /* radio_selected.png */; };
+		8932B92C16FE728100E9461C /* radio_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8932B92A16FE728100E9461C /* radio_selected@2x.png */; };
 		8968861516F92E7D00B440B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968861216F92E7D00B440B7 /* main.m */; };
 		8968861B16F92E9200B440B7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8968861816F92E9200B440B7 /* Default-568h@2x.png */; };
 		8968861C16F92E9200B440B7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8968861916F92E9200B440B7 /* Default.png */; };
@@ -68,6 +72,12 @@
 		8932B91D16FE577500E9461C /* VDCaseDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDCaseDetailsViewController.m; sourceTree = "<group>"; };
 		8932B91F16FE596600E9461C /* VDCaseListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDCaseListCell.h; sourceTree = "<group>"; };
 		8932B92016FE596600E9461C /* VDCaseListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDCaseListCell.m; sourceTree = "<group>"; };
+		8932B92316FE6BFF00E9461C /* VDNotificationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDNotificationListViewController.h; sourceTree = "<group>"; };
+		8932B92416FE6BFF00E9461C /* VDNotificationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDNotificationListViewController.m; sourceTree = "<group>"; };
+		8932B92616FE6D3400E9461C /* VDNotificationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDNotificationCell.h; sourceTree = "<group>"; };
+		8932B92716FE6D3400E9461C /* VDNotificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDNotificationCell.m; sourceTree = "<group>"; };
+		8932B92916FE728100E9461C /* radio_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_selected.png; sourceTree = "<group>"; };
+		8932B92A16FE728100E9461C /* radio_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio_selected@2x.png"; sourceTree = "<group>"; };
 		8968861216F92E7D00B440B7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Resources/main.m; sourceTree = "<group>"; };
 		8968861316F92E7D00B440B7 /* Voir Dire-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Voir Dire-Info.plist"; path = "Resources/Voir Dire-Info.plist"; sourceTree = "<group>"; };
 		8968861416F92E7D00B440B7 /* Voir Dire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Voir Dire-Prefix.pch"; path = "Resources/Voir Dire-Prefix.pch"; sourceTree = "<group>"; };
@@ -156,9 +166,22 @@
 			path = CaseDetails;
 			sourceTree = "<group>";
 		};
+		8932B92216FE6BE900E9461C /* NotificationList */ = {
+			isa = PBXGroup;
+			children = (
+				8932B92316FE6BFF00E9461C /* VDNotificationListViewController.h */,
+				8932B92416FE6BFF00E9461C /* VDNotificationListViewController.m */,
+				8932B92616FE6D3400E9461C /* VDNotificationCell.h */,
+				8932B92716FE6D3400E9461C /* VDNotificationCell.m */,
+			);
+			path = NotificationList;
+			sourceTree = "<group>";
+		};
 		8968861716F92E9200B440B7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				8932B92916FE728100E9461C /* radio_selected.png */,
+				8932B92A16FE728100E9461C /* radio_selected@2x.png */,
 				8968861816F92E9200B440B7 /* Default-568h@2x.png */,
 				8968861916F92E9200B440B7 /* Default.png */,
 				8968861A16F92E9200B440B7 /* Default@2x.png */,
@@ -218,6 +241,7 @@
 		8968862616F92EF600B440B7 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8932B92216FE6BE900E9461C /* NotificationList */,
 				8932B91616FE548400E9461C /* CaseList */,
 				8932B91B16FE576900E9461C /* CaseDetails */,
 				8968865316F93C4F00B440B7 /* Login */,
@@ -383,6 +407,8 @@
 				8968863716F932AE00B440B7 /* Main.storyboard in Resources */,
 				8968863B16F933C200B440B7 /* AppFlow.storyboard in Resources */,
 				8968865816F93C4F00B440B7 /* VDLoginViewController.xib in Resources */,
+				8932B92B16FE728100E9461C /* radio_selected.png in Resources */,
+				8932B92C16FE728100E9461C /* radio_selected@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +439,8 @@
 				8932B91A16FE549C00E9461C /* VDCaseListViewController.m in Sources */,
 				8932B91E16FE577500E9461C /* VDCaseDetailsViewController.m in Sources */,
 				8932B92116FE596600E9461C /* VDCaseListCell.m in Sources */,
+				8932B92516FE6BFF00E9461C /* VDNotificationListViewController.m in Sources */,
+				8932B92816FE6D3400E9461C /* VDNotificationCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

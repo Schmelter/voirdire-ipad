@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "VDNotification.h"
+#import "VDLawFirmUser.h"
 
 @interface VDNotificationManager : NSObject
 
-+(void)pendingNotificationsWithSuccessHandler:(void(^)(NSArray*))success withFailure:(void(^)(NSError*))failure;
++(void)pendingNotificationsForUser:(VDLawFirmUser*)user WithSuccessHandler:(void(^)(NSArray*))success withFailure:(void(^)(NSError*))failure;
 
 @end

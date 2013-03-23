@@ -11,11 +11,13 @@
 #import "VDTrialCaseManager.h"
 #import "VDCurrentLawFirmUserManager.h"
 #import "VDCaseDetailsViewController.h"
+#import "VDNotificationListViewController.h"
 
 @interface VDHomeViewController ()
 
 @property (nonatomic, readwrite, weak) IBOutlet VDCaseListViewController *caseListVC;
 @property (nonatomic, readwrite, weak) IBOutlet VDCaseDetailsViewController *caseDetailsVC;
+@property (nonatomic, readwrite, weak) IBOutlet VDNotificationListViewController *notificationListVC;
 
 @end
 
@@ -53,6 +55,9 @@
     } else if ([segue.identifier isEqualToString:@"EmbedVDCaseDetailsViewControllerSegue"]) {
         self.caseDetailsVC = segue.destinationViewController;
         self.caseDetailsVC.homeVC = self;
+    } else if ([segue.identifier isEqualToString:@"EmbedVDNotificationListViewControllerSegue"]) {
+        self.notificationListVC = segue.destinationViewController;
+        self.notificationListVC.homeVC = self;
     }
 }
 
