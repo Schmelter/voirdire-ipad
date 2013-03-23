@@ -11,6 +11,6 @@
 
 @interface VDNotificationManager : NSObject
 
--(void)pendingNotificationsWithSuccessHandler:(void(^)(NSArray*))success withFailure:(void(^)(NSError*))failure;
++(void)pendingNotificationsWithSuccessHandler:(void(^)(NSArray*))success withFailure:(void(^)(NSError*))failure;
 
 @end

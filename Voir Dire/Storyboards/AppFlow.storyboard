@@ -125,6 +125,91 @@
             </objects>
             <point key="canvasLocation" x="1168" y="-301"/>
         </scene>
+        <!--Case List View Controller-->
+        <scene sceneID="5NN-SW-0Ij">
+            <objects>
+                <viewController storyboardIdentifier="VDCaseListViewController" id="sOD-K5-mZk" customClass="VDCaseListViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XN2-Pn-ikg">
+                        <rect key="frame" x="0.0" y="0.0" width="824" height="558"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="95" sectionHeaderHeight="22" sectionFooterHeight="22" id="fqq-bV-VYQ">
+                                <rect key="frame" x="0.0" y="0.0" width="824" height="558"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="VDCaseListCell" id="qtC-aV-dRI" customClass="VDCaseListCell">
+                                        <rect key="frame" x="0.0" y="22" width="824" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="824" height="94"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="DocketNumber + CaseNumber + CaseName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="thi-5z-9mF">
+                                                    <rect key="frame" x="20" y="6" width="784" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Plaintiff V. Defendant" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Iod-dm-8FK">
+                                                    <rect key="frame" x="20" y="35" width="784" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Complaint Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rf5-Hp-iWJ">
+                                                    <rect key="frame" x="20" y="65" width="241" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Trial County" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xyb-2U-4dC">
+                                                    <rect key="frame" x="319" y="65" width="187" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="# Notes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iq8-xB-RtR">
+                                                    <rect key="frame" x="706" y="65" width="98" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="complaintDate" destination="Rf5-Hp-iWJ" id="Kwm-j0-CDh"/>
+                                            <outlet property="numberOfNotes" destination="iq8-xB-RtR" id="McE-XB-KOC"/>
+                                            <outlet property="plaintiffVDefendant" destination="Iod-dm-8FK" id="l2g-Is-K0m"/>
+                                            <outlet property="title" destination="thi-5z-9mF" id="jW3-FE-rO5"/>
+                                            <outlet property="trialCounty" destination="xyb-2U-4dC" id="eZr-8q-smQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="sOD-K5-mZk" id="6JV-fB-Pmy"/>
+                                    <outlet property="delegate" destination="sOD-K5-mZk" id="rLh-vk-uz6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="fqq-bV-VYQ" id="jd8-Va-kMW"/>
+                        <outlet property="view" destination="XN2-Pn-ikg" id="RCX-LC-B2h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5i-uq-1Dq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2622" y="-1353"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="OcE-eS-ust">
             <objects>
@@ -132,7 +217,25 @@
                     <view key="view" contentMode="scaleToFill" id="Gt5-68-8Jp">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="708"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.37182203650000001" green="1" blue="0.35426942519999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <containerView contentMode="scaleToFill" id="Yt2-hF-FdG">
+                                <rect key="frame" x="0.0" y="0.0" width="824" height="558"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="sOD-K5-mZk" kind="embed" identifier="EmbedVDCaseListViewControllerSegue" id="Yyc-QL-Xun"/>
+                                </connections>
+                            </containerView>
+                            <containerView contentMode="scaleToFill" id="V0D-KV-sjd">
+                                <rect key="frame" x="824" y="0.0" width="200" height="558"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="d07-FH-Zzu" kind="embed" identifier="EmbedVDCaseDetailsViewControllerSegue" id="ZoU-NS-Vgf"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <navigationItem key="navigationItem" id="XfA-u2-NOe"/>
@@ -144,12 +247,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKA-Jf-OyP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2288" y="-301"/>
+            <point key="canvasLocation" x="2546" y="-301"/>
+        </scene>
+        <!--Case Details View Controller-->
+        <scene sceneID="kqE-cm-t0c">
+            <objects>
+                <viewController storyboardIdentifier="VDCaseDetailsViewController" id="d07-FH-Zzu" customClass="VDCaseDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8Dy-wP-EOO">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="558"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ueD-Qa-3pS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3850" y="-233"/>
         </scene>
     </scenes>
     <classes>
+        <class className="VDCaseDetailsViewController" superclassName="VDViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VDCaseDetailsViewController.h"/>
+        </class>
+        <class className="VDCaseListCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VDCaseListCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="complaintDate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="numberOfNotes" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="plaintiffVDefendant" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="title" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="trialCounty" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="VDCaseListViewController" superclassName="VDViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VDCaseListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
         <class className="VDHomeViewController" superclassName="VDViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/VDHomeViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="caseDetailsVC" candidateClass="VDCaseDetailsViewController"/>
+                <relationship kind="outlet" name="caseListVC" candidateClass="VDCaseListViewController"/>
+            </relationships>
         </class>
         <class className="VDStartupPageViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/VDStartupPageViewController.h"/>

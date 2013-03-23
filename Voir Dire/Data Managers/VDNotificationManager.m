@@ -13,17 +13,10 @@ static VDNotificationManager *instance = nil;
 @implementation VDNotificationManager
 
 -(id)init {
-    self = [super init];
-    static dispatch_once_t once;
-    if (self) {
-        dispatch_once(&once, ^{
-            instance = self;
-        });
-    }
-    return instance;
+    return nil;
 }
 
--(void)pendingNotificationsWithSuccessHandler:(void(^)(NSArray*))success withFailure:(void(^)(NSError*))failure {
++(void)pendingNotificationsWithSuccessHandler:(void(^)(NSArray*))success withFailure:(void(^)(NSError*))failure {
     static NSMutableArray *notifications = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

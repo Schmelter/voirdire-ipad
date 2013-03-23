@@ -8,7 +8,10 @@
 
 #import "VDViewController.h"
 #import <UIKit/UIKit.h>
+#import "VDTrialCase.h"
 
 @interface VDHomeViewController : VDViewController
+
+-(void)displayCase:(VDTrialCase*)trialCase;
 
 @end

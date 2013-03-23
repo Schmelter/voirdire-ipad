@@ -13,17 +13,10 @@ static VDCurrentLawFirmUserManager *instance = nil;
 @implementation VDCurrentLawFirmUserManager
 
 -(id)init {
-    self = [super init];
-    static dispatch_once_t once;
-    if (self) {
-        dispatch_once(&once, ^{
-            instance = self;
-        });
-    }
-    return instance;
+    return nil;
 }
 
--(void)currentUserWithSuccessHandler:(void(^)(VDLawFirmUser*))success withFailure:(void(^)(NSError*))failure {
++(void)currentUserWithSuccessHandler:(void(^)(VDLawFirmUser*))success withFailure:(void(^)(NSError*))failure {
     static VDLawFirmUser *currentUser = nil;
     static dispatch_once_t once;
     dispatch_once(&once, ^{

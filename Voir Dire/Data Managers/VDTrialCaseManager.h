@@ -13,6 +13,6 @@
 
 @interface VDTrialCaseManager : NSObject
 
--(void)trialCasesForUser:(VDLawFirmUser*)user withSuccessHandler:(void(^)(NSArray*))success withFailure:(void(^)(NSError*))failure;
++(void)trialCasesForUser:(VDLawFirmUser*)user withSuccessHandler:(void(^)(NSArray*))success withFailure:(void(^)(NSError*))failure;
 
 @end

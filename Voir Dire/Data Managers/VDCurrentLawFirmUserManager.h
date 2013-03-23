@@ -11,6 +11,6 @@
 
 @interface VDCurrentLawFirmUserManager : NSObject
 
--(void)currentUserWithSuccessHandler:(void(^)(VDLawFirmUser*))success withFailure:(void(^)(NSError*))failure;
++(void)currentUserWithSuccessHandler:(void(^)(VDLawFirmUser*))success withFailure:(void(^)(NSError*))failure;
 
 @end

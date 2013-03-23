@@ -17,6 +17,9 @@
 		890ABC1B16FABA0600BA4B08 /* VDNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABC1A16FABA0600BA4B08 /* VDNotificationManager.m */; };
 		890ABC1E16FABC0100BA4B08 /* VDTrialCaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABC1D16FABC0100BA4B08 /* VDTrialCaseManager.m */; };
 		890ABC2D16FAC31400BA4B08 /* VDJurorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABC2C16FAC31400BA4B08 /* VDJurorManager.m */; };
+		8932B91A16FE549C00E9461C /* VDCaseListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8932B91916FE549C00E9461C /* VDCaseListViewController.m */; };
+		8932B91E16FE577500E9461C /* VDCaseDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8932B91D16FE577500E9461C /* VDCaseDetailsViewController.m */; };
+		8932B92116FE596600E9461C /* VDCaseListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8932B92016FE596600E9461C /* VDCaseListCell.m */; };
 		8968861516F92E7D00B440B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968861216F92E7D00B440B7 /* main.m */; };
 		8968861B16F92E9200B440B7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8968861816F92E9200B440B7 /* Default-568h@2x.png */; };
 		8968861C16F92E9200B440B7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8968861916F92E9200B440B7 /* Default.png */; };
@@ -59,6 +62,12 @@
 		890ABC1D16FABC0100BA4B08 /* VDTrialCaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDTrialCaseManager.m; sourceTree = "<group>"; };
 		890ABC2B16FAC31400BA4B08 /* VDJurorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDJurorManager.h; sourceTree = "<group>"; };
 		890ABC2C16FAC31400BA4B08 /* VDJurorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDJurorManager.m; sourceTree = "<group>"; };
+		8932B91816FE549C00E9461C /* VDCaseListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDCaseListViewController.h; sourceTree = "<group>"; };
+		8932B91916FE549C00E9461C /* VDCaseListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDCaseListViewController.m; sourceTree = "<group>"; };
+		8932B91C16FE577500E9461C /* VDCaseDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDCaseDetailsViewController.h; sourceTree = "<group>"; };
+		8932B91D16FE577500E9461C /* VDCaseDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDCaseDetailsViewController.m; sourceTree = "<group>"; };
+		8932B91F16FE596600E9461C /* VDCaseListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDCaseListCell.h; sourceTree = "<group>"; };
+		8932B92016FE596600E9461C /* VDCaseListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDCaseListCell.m; sourceTree = "<group>"; };
 		8968861216F92E7D00B440B7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Resources/main.m; sourceTree = "<group>"; };
 		8968861316F92E7D00B440B7 /* Voir Dire-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Voir Dire-Info.plist"; path = "Resources/Voir Dire-Info.plist"; sourceTree = "<group>"; };
 		8968861416F92E7D00B440B7 /* Voir Dire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Voir Dire-Prefix.pch"; path = "Resources/Voir Dire-Prefix.pch"; sourceTree = "<group>"; };
@@ -127,6 +136,26 @@
 			path = "Data Managers";
 			sourceTree = "<group>";
 		};
+		8932B91616FE548400E9461C /* CaseList */ = {
+			isa = PBXGroup;
+			children = (
+				8932B91816FE549C00E9461C /* VDCaseListViewController.h */,
+				8932B91916FE549C00E9461C /* VDCaseListViewController.m */,
+				8932B91F16FE596600E9461C /* VDCaseListCell.h */,
+				8932B92016FE596600E9461C /* VDCaseListCell.m */,
+			);
+			path = CaseList;
+			sourceTree = "<group>";
+		};
+		8932B91B16FE576900E9461C /* CaseDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8932B91C16FE577500E9461C /* VDCaseDetailsViewController.h */,
+				8932B91D16FE577500E9461C /* VDCaseDetailsViewController.m */,
+			);
+			path = CaseDetails;
+			sourceTree = "<group>";
+		};
 		8968861716F92E9200B440B7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +218,8 @@
 		8968862616F92EF600B440B7 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8932B91616FE548400E9461C /* CaseList */,
+				8932B91B16FE576900E9461C /* CaseDetails */,
 				8968865316F93C4F00B440B7 /* Login */,
 				8968864A16F9394600B440B7 /* AppFlow */,
 				890ABBFA16FAA93B00BA4B08 /* Home */,
@@ -379,6 +410,9 @@
 				890ABC1B16FABA0600BA4B08 /* VDNotificationManager.m in Sources */,
 				890ABC1E16FABC0100BA4B08 /* VDTrialCaseManager.m in Sources */,
 				890ABC2D16FAC31400BA4B08 /* VDJurorManager.m in Sources */,
+				8932B91A16FE549C00E9461C /* VDCaseListViewController.m in Sources */,
+				8932B91E16FE577500E9461C /* VDCaseDetailsViewController.m in Sources */,
+				8932B92116FE596600E9461C /* VDCaseListCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

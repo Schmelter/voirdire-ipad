@@ -13,17 +13,10 @@ static VDJurorManager *instance = nil;
 @implementation VDJurorManager
 
 -(id)init {
-    self = [super init];
-    static dispatch_once_t once;
-    if (self) {
-        dispatch_once(&once, ^{
-            instance = self;
-        });
-    }
-    return instance;
+    return nil;
 }
 
--(void)jurorsForTrialCase:(VDTrialCase*)trialCase withSuccessHandler:(void(^)(NSArray*))success withFailure:(void(^)(NSError*))failure {
++(void)jurorsForTrialCase:(VDTrialCase*)trialCase withSuccessHandler:(void(^)(NSArray*))success withFailure:(void(^)(NSError*))failure {
     NSMutableArray *jurors = [[NSMutableArray alloc] initWithCapacity:trialCase.juryPoolSize];
     
     static dispatch_once_t onceToken;
