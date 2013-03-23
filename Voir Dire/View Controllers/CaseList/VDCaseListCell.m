@@ -17,6 +17,8 @@
 @property (nonatomic, readwrite, weak) IBOutlet UILabel *trialCounty;
 @property (nonatomic, readwrite, weak) IBOutlet UILabel *numberOfNotes;
 
+-(void)updateView;
+
 @end
 
 @implementation VDCaseListCell
@@ -38,6 +40,11 @@
 }
 
 -(void)drawRect:(CGRect)rect {
+    [self updateView];
+    [super drawRect:rect];
+}
+
+-(void)updateView {
     static NSDateFormatter *dateFormatter = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -56,8 +63,11 @@
     
     self.layer.borderColor = [UIColor blackColor].CGColor;
     self.layer.borderWidth = 1.0f;
-    
-    [super drawRect:rect];
+}
+
+-(void)setTrialCase:(VDTrialCase *)trialCase {
+    _trialCase = trialCase;
+    [self updateView];
 }
 
 @end

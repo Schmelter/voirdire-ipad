@@ -67,4 +67,9 @@
 }
 #pragma mark ---
 
+-(void)setCaseList:(NSArray *)caseList {
+    _caseList = caseList;
+    [self.tableView reloadData];
+}
+
 @end

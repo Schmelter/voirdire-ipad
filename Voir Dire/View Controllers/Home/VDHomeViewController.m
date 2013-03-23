@@ -56,4 +56,8 @@
     }
 }
 
+-(void)displayCase:(VDTrialCase *)trialCase {
+    self.caseDetailsVC.trialCase = trialCase;
+}
+
 @end

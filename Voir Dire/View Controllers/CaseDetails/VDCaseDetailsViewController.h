@@ -8,9 +8,11 @@
 
 #import "VDViewController.h"
 #import "VDHomeViewController.h"
+#import "VDTrialCase.h"
 
 @interface VDCaseDetailsViewController : VDViewController
 
 @property (nonatomic, readwrite, weak) VDHomeViewController *homeVC;
+@property (nonatomic, readwrite, strong) VDTrialCase *trialCase;
 
 @end
