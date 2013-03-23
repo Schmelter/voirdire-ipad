@@ -24,6 +24,7 @@
 		8932B92816FE6D3400E9461C /* VDNotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8932B92716FE6D3400E9461C /* VDNotificationCell.m */; };
 		8932B92B16FE728100E9461C /* radio_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 8932B92916FE728100E9461C /* radio_selected.png */; };
 		8932B92C16FE728100E9461C /* radio_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8932B92A16FE728100E9461C /* radio_selected@2x.png */; };
+		8932B93016FE75CA00E9461C /* VDLawFirmUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8932B92F16FE75CA00E9461C /* VDLawFirmUserViewController.m */; };
 		8968861516F92E7D00B440B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968861216F92E7D00B440B7 /* main.m */; };
 		8968861B16F92E9200B440B7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8968861816F92E9200B440B7 /* Default-568h@2x.png */; };
 		8968861C16F92E9200B440B7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8968861916F92E9200B440B7 /* Default.png */; };
@@ -78,6 +79,8 @@
 		8932B92716FE6D3400E9461C /* VDNotificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDNotificationCell.m; sourceTree = "<group>"; };
 		8932B92916FE728100E9461C /* radio_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radio_selected.png; sourceTree = "<group>"; };
 		8932B92A16FE728100E9461C /* radio_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radio_selected@2x.png"; sourceTree = "<group>"; };
+		8932B92E16FE75CA00E9461C /* VDLawFirmUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDLawFirmUserViewController.h; sourceTree = "<group>"; };
+		8932B92F16FE75CA00E9461C /* VDLawFirmUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDLawFirmUserViewController.m; sourceTree = "<group>"; };
 		8968861216F92E7D00B440B7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Resources/main.m; sourceTree = "<group>"; };
 		8968861316F92E7D00B440B7 /* Voir Dire-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Voir Dire-Info.plist"; path = "Resources/Voir Dire-Info.plist"; sourceTree = "<group>"; };
 		8968861416F92E7D00B440B7 /* Voir Dire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Voir Dire-Prefix.pch"; path = "Resources/Voir Dire-Prefix.pch"; sourceTree = "<group>"; };
@@ -177,6 +180,15 @@
 			path = NotificationList;
 			sourceTree = "<group>";
 		};
+		8932B92D16FE75B300E9461C /* LawFirmUser */ = {
+			isa = PBXGroup;
+			children = (
+				8932B92E16FE75CA00E9461C /* VDLawFirmUserViewController.h */,
+				8932B92F16FE75CA00E9461C /* VDLawFirmUserViewController.m */,
+			);
+			path = LawFirmUser;
+			sourceTree = "<group>";
+		};
 		8968861716F92E9200B440B7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +253,7 @@
 		8968862616F92EF600B440B7 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8932B92D16FE75B300E9461C /* LawFirmUser */,
 				8932B92216FE6BE900E9461C /* NotificationList */,
 				8932B91616FE548400E9461C /* CaseList */,
 				8932B91B16FE576900E9461C /* CaseDetails */,
@@ -441,6 +454,7 @@
 				8932B92116FE596600E9461C /* VDCaseListCell.m in Sources */,
 				8932B92516FE6BFF00E9461C /* VDNotificationListViewController.m in Sources */,
 				8932B92816FE6D3400E9461C /* VDNotificationCell.m in Sources */,
+				8932B93016FE75CA00E9461C /* VDLawFirmUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
