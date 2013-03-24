@@ -22,6 +22,7 @@
 @property (nonatomic, readwrite) VDReligion religion;
 @property (nonatomic, readwrite) VDEducation education;
 @property (nonatomic, readwrite) VDSexualOrientation sexualOrientation;
+@property (nonatomic, readwrite) NSArray *jurorNotes;
 
 
 @property (nonatomic, readwrite) NSInteger rating;

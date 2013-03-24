@@ -58,7 +58,7 @@
     return 1;
 }
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString* CellIdentifier = @"VDJurorViewCell";
+    //static NSString* CellIdentifier = @"VDJurorViewCell";
     VDJuror *juror = [self.jurors objectAtIndex:indexPath.row];
     
     VDJurorViewCell *cell = nil; //[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
@@ -106,7 +106,9 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
+    VDJurorViewCell *viewCell = (VDJurorViewCell*) [collectionView cellForItemAtIndexPath:indexPath];
+    VDJuror *juror = [self.jurors objectAtIndex:indexPath.row];
+    [self.voirDireVC displayJurorDetails:juror];
 }
 #pragma mark ---
 

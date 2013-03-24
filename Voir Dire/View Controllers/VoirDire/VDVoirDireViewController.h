@@ -8,9 +8,13 @@
 
 #import "VDViewController.h"
 #import "VDTrialCase.h"
+#import "VDJuror.h"
+#import "VDJurorDetailsView.h"
 
-@interface VDVoirDireViewController : VDViewController
+@interface VDVoirDireViewController : VDViewController <VDJurorDetailsDelegate>
 
 @property (nonatomic, readwrite, strong) VDTrialCase *trialCase;
+
+-(void)displayJurorDetails:(VDJuror*)juror;
 
 @end

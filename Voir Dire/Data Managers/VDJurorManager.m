@@ -8,6 +8,7 @@
 
 #import "VDJurorManager.h"
 #import <stdlib.h>
+#import "VDJurorNote.h"
 
 
 static NSMutableDictionary *trialCaseIDToJurors = nil;
@@ -83,7 +84,21 @@ static NSMutableDictionary *trialCaseIDToJurors = nil;
             juror.religion = VDReligion_Christianity;
             juror.education = VDEducation_Bachelors;
             juror.sexualOrientation = VDSexualOrientation_Straight;
-            juror.rating = arc4random() % 5;
+            juror.rating = arc4random() % 6;
+            
+            NSInteger noteCount = (arc4random() % 20) + 1;
+            NSMutableArray *jurorNotes = [[NSMutableArray alloc] initWithCapacity:noteCount];
+            for (NSInteger i = 0; i < noteCount; i++) {
+                VDJurorNote *note = [[VDJurorNote alloc] init];
+                note.jurorNoteID = i;
+                note.jurorNoteID = juror.jurorID;
+                note.trialCaseID = juror.trialCaseID;
+                note.dateTimeStamp = [NSDate dateWithTimeIntervalSinceNow:-50000];
+                note.notes = [NSString stringWithFormat:@"Example Note #%i", i];
+                
+                [jurorNotes addObject:note];
+            }
+            juror.jurorNotes = jurorNotes;
             
             [jurors addObject:juror];
         }
