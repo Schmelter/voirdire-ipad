@@ -10,4 +10,12 @@
 
 @implementation VDJuror
 
+-(id)init {
+    self = [super init];
+    if (self) {
+        self.rating = 1;
+    }
+    return self;
+}
+
 @end

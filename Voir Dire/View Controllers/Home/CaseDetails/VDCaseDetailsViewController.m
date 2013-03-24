@@ -7,6 +7,8 @@
 //
 
 #import "VDCaseDetailsViewController.h"
+#import "VDStartupPageViewController.h"
+#import "VDVoirDireViewController.h"
 
 @interface VDCaseDetailsViewController ()
 
@@ -25,6 +27,8 @@
 @property (nonatomic, readwrite, weak) IBOutlet UILabel *notes;
 
 -(void)updateView;
+-(IBAction)voirDirePushed:(id)sender;
+-(IBAction)trialPushed:(id)sender;
 
 @end
 
@@ -79,6 +83,21 @@
 -(void)setTrialCase:(VDTrialCase *)trialCase {
     _trialCase = trialCase;
     [self updateView];
+}
+
+-(IBAction)voirDirePushed:(id)sender {
+    if (self.trialCase == nil) {
+        return;
+    }
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AppFlow" bundle:nil];
+    VDVoirDireViewController *voirDireVC = [storyboard instantiateViewControllerWithIdentifier:@"VDVoirDireViewController"];
+    voirDireVC.trialCase = self.trialCase;
+    
+    [self.homeVC.startupViewController presentVDViewController:voirDireVC animated:YES completion:nil];
+}
+
+-(IBAction)trialPushed:(id)sender {
+    
 }
 
 @end

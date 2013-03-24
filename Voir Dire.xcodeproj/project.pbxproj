@@ -43,6 +43,11 @@
 		89B2AA0316FF83F7008E10BA /* VDLawFirmUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B2A9FA16FF83F7008E10BA /* VDLawFirmUserViewController.m */; };
 		89B2AA0416FF83F7008E10BA /* VDNotificationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B2A9FD16FF83F7008E10BA /* VDNotificationCell.m */; };
 		89B2AA0516FF83F7008E10BA /* VDNotificationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B2A9FF16FF83F7008E10BA /* VDNotificationListViewController.m */; };
+		89B2AA0916FF8B2C008E10BA /* VDVoirDireViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B2AA0816FF8B2C008E10BA /* VDVoirDireViewController.m */; };
+		89B2AA1216FF8F38008E10BA /* LXReorderableCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B2AA1116FF8F38008E10BA /* LXReorderableCollectionViewFlowLayout.m */; };
+		89B2AA1616FF93B6008E10BA /* VDJuryPoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B2AA1516FF93B6008E10BA /* VDJuryPoolViewController.m */; };
+		89B2AA1C16FF9783008E10BA /* VDJurorViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B2AA1B16FF9783008E10BA /* VDJurorViewCell.m */; };
+		89B2AA1E16FF9799008E10BA /* VDJurorViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B2AA1D16FF9799008E10BA /* VDJurorViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +113,15 @@
 		89B2A9FD16FF83F7008E10BA /* VDNotificationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDNotificationCell.m; sourceTree = "<group>"; };
 		89B2A9FE16FF83F7008E10BA /* VDNotificationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDNotificationListViewController.h; sourceTree = "<group>"; };
 		89B2A9FF16FF83F7008E10BA /* VDNotificationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDNotificationListViewController.m; sourceTree = "<group>"; };
+		89B2AA0716FF8B2C008E10BA /* VDVoirDireViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDVoirDireViewController.h; sourceTree = "<group>"; };
+		89B2AA0816FF8B2C008E10BA /* VDVoirDireViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDVoirDireViewController.m; sourceTree = "<group>"; };
+		89B2AA1016FF8F38008E10BA /* LXReorderableCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXReorderableCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		89B2AA1116FF8F38008E10BA /* LXReorderableCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXReorderableCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		89B2AA1416FF93B6008E10BA /* VDJuryPoolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDJuryPoolViewController.h; sourceTree = "<group>"; };
+		89B2AA1516FF93B6008E10BA /* VDJuryPoolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDJuryPoolViewController.m; sourceTree = "<group>"; };
+		89B2AA1A16FF9783008E10BA /* VDJurorViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDJurorViewCell.h; sourceTree = "<group>"; };
+		89B2AA1B16FF9783008E10BA /* VDJurorViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDJurorViewCell.m; sourceTree = "<group>"; };
+		89B2AA1D16FF9799008E10BA /* VDJurorViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VDJurorViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +233,7 @@
 			children = (
 				8968865316F93C4F00B440B7 /* Login */,
 				8968864A16F9394600B440B7 /* AppFlow */,
+				89B2AA0616FF8B17008E10BA /* VoirDire */,
 				890ABBFA16FAA93B00BA4B08 /* Home */,
 				8968863016F931C500B440B7 /* VDViewController.h */,
 				8968863116F931C500B440B7 /* VDViewController.m */,
@@ -231,6 +246,8 @@
 		8968862716F92EFF00B440B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				89B2AA1816FF975F008E10BA /* Juror */,
+				89B2AA1916FF975F008E10BA /* JurorDetails */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,6 +309,7 @@
 		898122AA16E8465E0028C05E /* Voir Dire */ = {
 			isa = PBXGroup;
 			children = (
+				89B2AA0E16FF8F38008E10BA /* Libraries */,
 				8968862816F92F0E00B440B7 /* WebServices */,
 				8968862716F92EFF00B440B7 /* Views */,
 				8968862616F92EF600B440B7 /* View Controllers */,
@@ -361,6 +379,59 @@
 			path = NotificationList;
 			sourceTree = "<group>";
 		};
+		89B2AA0616FF8B17008E10BA /* VoirDire */ = {
+			isa = PBXGroup;
+			children = (
+				89B2AA1316FF9392008E10BA /* JuryPool */,
+				89B2AA0716FF8B2C008E10BA /* VDVoirDireViewController.h */,
+				89B2AA0816FF8B2C008E10BA /* VDVoirDireViewController.m */,
+			);
+			path = VoirDire;
+			sourceTree = "<group>";
+		};
+		89B2AA0E16FF8F38008E10BA /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				89B2AA0F16FF8F38008E10BA /* LXReorderableCollectionViewFlowLayout */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		89B2AA0F16FF8F38008E10BA /* LXReorderableCollectionViewFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				89B2AA1016FF8F38008E10BA /* LXReorderableCollectionViewFlowLayout.h */,
+				89B2AA1116FF8F38008E10BA /* LXReorderableCollectionViewFlowLayout.m */,
+			);
+			path = LXReorderableCollectionViewFlowLayout;
+			sourceTree = "<group>";
+		};
+		89B2AA1316FF9392008E10BA /* JuryPool */ = {
+			isa = PBXGroup;
+			children = (
+				89B2AA1416FF93B6008E10BA /* VDJuryPoolViewController.h */,
+				89B2AA1516FF93B6008E10BA /* VDJuryPoolViewController.m */,
+			);
+			path = JuryPool;
+			sourceTree = "<group>";
+		};
+		89B2AA1816FF975F008E10BA /* Juror */ = {
+			isa = PBXGroup;
+			children = (
+				89B2AA1A16FF9783008E10BA /* VDJurorViewCell.h */,
+				89B2AA1B16FF9783008E10BA /* VDJurorViewCell.m */,
+				89B2AA1D16FF9799008E10BA /* VDJurorViewCell.xib */,
+			);
+			path = Juror;
+			sourceTree = "<group>";
+		};
+		89B2AA1916FF975F008E10BA /* JurorDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JurorDetails;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -422,6 +493,7 @@
 				8968865816F93C4F00B440B7 /* VDLoginViewController.xib in Resources */,
 				8932B92B16FE728100E9461C /* radio_selected.png in Resources */,
 				8932B92C16FE728100E9461C /* radio_selected@2x.png in Resources */,
+				89B2AA1E16FF9799008E10BA /* VDJurorViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +527,10 @@
 				89B2AA0316FF83F7008E10BA /* VDLawFirmUserViewController.m in Sources */,
 				89B2AA0416FF83F7008E10BA /* VDNotificationCell.m in Sources */,
 				89B2AA0516FF83F7008E10BA /* VDNotificationListViewController.m in Sources */,
+				89B2AA0916FF8B2C008E10BA /* VDVoirDireViewController.m in Sources */,
+				89B2AA1216FF8F38008E10BA /* LXReorderableCollectionViewFlowLayout.m in Sources */,
+				89B2AA1616FF93B6008E10BA /* VDJuryPoolViewController.m in Sources */,
+				89B2AA1C16FF9783008E10BA /* VDJurorViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

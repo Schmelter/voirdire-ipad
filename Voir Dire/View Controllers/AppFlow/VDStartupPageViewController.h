@@ -13,4 +13,7 @@
 
 @property (nonatomic, readwrite, weak) VDRootViewController *rootVC;
 
+
+-(void)presentVDViewController:(VDViewController*)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion;
+
 @end

@@ -14,6 +14,6 @@
     @private
 }
 
-+(void)jurorsForTrialCase:(VDTrialCase*)trialCase withSuccessHandler:(void(^)(NSArray*))success withFailure:(void(^)(NSError*))failure;
++(void)jurorsForTrialCase:(VDTrialCase*)trialCase withSuccessHandler:(void(^)(NSMutableArray*))success withFailure:(void(^)(NSError*))failure;
 
 @end

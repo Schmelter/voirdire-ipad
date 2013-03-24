@@ -23,4 +23,7 @@
 @property (nonatomic, readwrite) VDEducation education;
 @property (nonatomic, readwrite) VDSexualOrientation sexualOrientation;
 
+
+@property (nonatomic, readwrite) NSInteger rating;
+
 @end
