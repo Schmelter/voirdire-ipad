@@ -94,7 +94,7 @@ static NSMutableDictionary *trialCaseIDToJurors = nil;
                 note.jurorNoteID = juror.jurorID;
                 note.trialCaseID = juror.trialCaseID;
                 note.dateTimeStamp = [NSDate dateWithTimeIntervalSinceNow:-50000];
-                note.notes = [NSString stringWithFormat:@"Example Note #%i", i];
+                note.notes = [NSString stringWithFormat:@"Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i", i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i];
                 
                 [jurorNotes addObject:note];
             }

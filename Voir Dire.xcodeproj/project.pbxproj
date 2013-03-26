@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89038E4517012A4F00683FAB /* VDJurorDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89038E4317012A4F00683FAB /* VDJurorDetailsViewController.m */; };
+		89038E4617012A4F00683FAB /* VDJurorDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89038E4417012A4F00683FAB /* VDJurorDetailsViewController.xib */; };
 		890ABBFE16FAA94E00BA4B08 /* VDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABBFD16FAA94E00BA4B08 /* VDHomeViewController.m */; };
 		890ABC0716FAA9B800BA4B08 /* VDNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABC0616FAA9B800BA4B08 /* VDNotification.m */; };
 		890ABC0A16FAAA7D00BA4B08 /* VDTrialCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 890ABC0916FAAA7D00BA4B08 /* VDTrialCase.m */; };
@@ -48,12 +50,13 @@
 		89B2AA1616FF93B6008E10BA /* VDJuryPoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B2AA1516FF93B6008E10BA /* VDJuryPoolViewController.m */; };
 		89B2AA2316FFA9A7008E10BA /* VDJurorViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B2AA2116FFA9A7008E10BA /* VDJurorViewCell.m */; };
 		89B2AA2416FFA9A7008E10BA /* VDJurorViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B2AA2216FFA9A7008E10BA /* VDJurorViewCell.xib */; };
-		89B2AA2616FFA9BA008E10BA /* VDJurorDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B2AA2516FFA9BA008E10BA /* VDJurorDetailsView.xib */; };
-		89B2AA2916FFA9C8008E10BA /* VDJurorDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B2AA2816FFA9C8008E10BA /* VDJurorDetailsView.m */; };
 		89B2AA2C16FFB8C9008E10BA /* VDJurorNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B2AA2B16FFB8C9008E10BA /* VDJurorNote.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		89038E4217012A4F00683FAB /* VDJurorDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDJurorDetailsViewController.h; sourceTree = "<group>"; };
+		89038E4317012A4F00683FAB /* VDJurorDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDJurorDetailsViewController.m; sourceTree = "<group>"; };
+		89038E4417012A4F00683FAB /* VDJurorDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VDJurorDetailsViewController.xib; sourceTree = "<group>"; };
 		890ABBFC16FAA94E00BA4B08 /* VDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDHomeViewController.h; sourceTree = "<group>"; };
 		890ABBFD16FAA94E00BA4B08 /* VDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDHomeViewController.m; sourceTree = "<group>"; };
 		890ABC0516FAA9B800BA4B08 /* VDNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDNotification.h; sourceTree = "<group>"; };
@@ -125,9 +128,6 @@
 		89B2AA2016FFA9A7008E10BA /* VDJurorViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDJurorViewCell.h; sourceTree = "<group>"; };
 		89B2AA2116FFA9A7008E10BA /* VDJurorViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDJurorViewCell.m; sourceTree = "<group>"; };
 		89B2AA2216FFA9A7008E10BA /* VDJurorViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VDJurorViewCell.xib; sourceTree = "<group>"; };
-		89B2AA2516FFA9BA008E10BA /* VDJurorDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VDJurorDetailsView.xib; sourceTree = "<group>"; };
-		89B2AA2716FFA9C8008E10BA /* VDJurorDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDJurorDetailsView.h; sourceTree = "<group>"; };
-		89B2AA2816FFA9C8008E10BA /* VDJurorDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDJurorDetailsView.m; sourceTree = "<group>"; };
 		89B2AA2A16FFB8C9008E10BA /* VDJurorNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDJurorNote.h; sourceTree = "<group>"; };
 		89B2AA2B16FFB8C9008E10BA /* VDJurorNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDJurorNote.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +147,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89038E4117012A4F00683FAB /* JurorDetails */ = {
+			isa = PBXGroup;
+			children = (
+				89038E4217012A4F00683FAB /* VDJurorDetailsViewController.h */,
+				89038E4317012A4F00683FAB /* VDJurorDetailsViewController.m */,
+				89038E4417012A4F00683FAB /* VDJurorDetailsViewController.xib */,
+			);
+			path = JurorDetails;
+			sourceTree = "<group>";
+		};
 		890ABBFA16FAA93B00BA4B08 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,7 +267,6 @@
 			isa = PBXGroup;
 			children = (
 				89B2AA1F16FFA9A7008E10BA /* JurorCell */,
-				89B2AA1916FF975F008E10BA /* JurorDetails */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -392,6 +401,7 @@
 		89B2AA0616FF8B17008E10BA /* VoirDire */ = {
 			isa = PBXGroup;
 			children = (
+				89038E4117012A4F00683FAB /* JurorDetails */,
 				89B2AA1316FF9392008E10BA /* JuryPool */,
 				89B2AA0716FF8B2C008E10BA /* VDVoirDireViewController.h */,
 				89B2AA0816FF8B2C008E10BA /* VDVoirDireViewController.m */,
@@ -423,16 +433,6 @@
 				89B2AA1516FF93B6008E10BA /* VDJuryPoolViewController.m */,
 			);
 			path = JuryPool;
-			sourceTree = "<group>";
-		};
-		89B2AA1916FF975F008E10BA /* JurorDetails */ = {
-			isa = PBXGroup;
-			children = (
-				89B2AA2516FFA9BA008E10BA /* VDJurorDetailsView.xib */,
-				89B2AA2716FFA9C8008E10BA /* VDJurorDetailsView.h */,
-				89B2AA2816FFA9C8008E10BA /* VDJurorDetailsView.m */,
-			);
-			path = JurorDetails;
 			sourceTree = "<group>";
 		};
 		89B2AA1F16FFA9A7008E10BA /* JurorCell */ = {
@@ -507,7 +507,7 @@
 				8932B92B16FE728100E9461C /* radio_selected.png in Resources */,
 				8932B92C16FE728100E9461C /* radio_selected@2x.png in Resources */,
 				89B2AA2416FFA9A7008E10BA /* VDJurorViewCell.xib in Resources */,
-				89B2AA2616FFA9BA008E10BA /* VDJurorDetailsView.xib in Resources */,
+				89038E4617012A4F00683FAB /* VDJurorDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,8 +545,8 @@
 				89B2AA1216FF8F38008E10BA /* LXReorderableCollectionViewFlowLayout.m in Sources */,
 				89B2AA1616FF93B6008E10BA /* VDJuryPoolViewController.m in Sources */,
 				89B2AA2316FFA9A7008E10BA /* VDJurorViewCell.m in Sources */,
-				89B2AA2916FFA9C8008E10BA /* VDJurorDetailsView.m in Sources */,
 				89B2AA2C16FFB8C9008E10BA /* VDJurorNote.m in Sources */,
+				89038E4517012A4F00683FAB /* VDJurorDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

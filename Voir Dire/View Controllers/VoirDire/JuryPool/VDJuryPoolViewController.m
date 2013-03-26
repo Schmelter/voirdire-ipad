@@ -15,7 +15,6 @@
 @interface VDJuryPoolViewController ()
 
 @property (nonatomic, readwrite, weak) IBOutlet UICollectionView *collectionView;
-@property (nonatomic, readwrite, strong) NSMutableArray *jurors;
 
 @end
 
@@ -34,12 +33,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [VDJurorManager jurorsForTrialCase:self.trialCase withSuccessHandler:^(NSMutableArray *jurors){
-        self.jurors = jurors;
-        [self.collectionView reloadData];
-    } withFailure:^(NSError *error){
-        
-    }];
+    [self.collectionView reloadData];
 }
 
 #pragma mark - LXReorderableCollectionViewDelegateFlowLayout Methods
@@ -106,11 +100,13 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    VDJurorViewCell *viewCell = (VDJurorViewCell*) [collectionView cellForItemAtIndexPath:indexPath];
-    VDJuror *juror = [self.jurors objectAtIndex:indexPath.row];
-    [self.voirDireVC displayJurorDetails:juror];
+    [self.voirDireVC displayJurorDetails:indexPath.row ForJurors:self.jurors];
 }
 #pragma mark ---
 
+-(void)setJurors:(NSMutableArray *)jurors {
+    _jurors = jurors;
+    [self.collectionView reloadData];
+}
 
 @end

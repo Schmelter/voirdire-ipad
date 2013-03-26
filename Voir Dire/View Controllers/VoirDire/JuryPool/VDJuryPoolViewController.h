@@ -14,6 +14,6 @@
 @interface VDJuryPoolViewController : UICollectionViewController <LXReorderableCollectionViewDelegateFlowLayout>
 
 @property (nonatomic, readwrite, weak) VDVoirDireViewController *voirDireVC;
-@property (nonatomic, readwrite, strong) VDTrialCase *trialCase;
+@property (nonatomic, readwrite, strong) NSMutableArray *jurors;
 
 @end
