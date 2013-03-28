@@ -12,7 +12,6 @@
 
 @interface VDStartupPageViewController ()
 
-@property (nonatomic, readwrite, weak) IBOutlet UINavigationController *navigationController;
 @property (nonatomic, readwrite, weak) IBOutlet UIButton *forwardButton;
 @property (nonatomic, readwrite, weak) IBOutlet UIButton *backButton;
 
@@ -47,15 +46,9 @@
     [self presentVDViewController:homeViewController animated:YES completion:nil];
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([@"EmbedUINavigationControllerSegue" isEqualToString:segue.identifier]) {
-        self.navigationController = segue.destinationViewController;
-    }
-}
-
 -(void)presentVDViewController:(VDViewController*)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion {
     viewControllerToPresent.startupViewController = self;
-    [_navigationController pushViewController:viewControllerToPresent animated:flag];
+    [self pushViewController:viewControllerToPresent animated:flag];
     if (completion) {
         completion();
     }

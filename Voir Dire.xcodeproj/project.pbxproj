@@ -64,6 +64,7 @@
 		894AF8CD1703E42E0052D19E /* avatar_luchadore_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 894AF8CC1703E42E0052D19E /* avatar_luchadore_green.png */; };
 		894AF8D01703E5C30052D19E /* avatar_americanindian_female.png in Resources */ = {isa = PBXBuildFile; fileRef = 894AF8CE1703E5C30052D19E /* avatar_americanindian_female.png */; };
 		894AF8D11703E5C30052D19E /* avatar_americanindian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = 894AF8CF1703E5C30052D19E /* avatar_americanindian_male.png */; };
+		894AF8D41703F2940052D19E /* VDStartupNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 894AF8D31703F2940052D19E /* VDStartupNavigationBar.m */; };
 		8968861516F92E7D00B440B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968861216F92E7D00B440B7 /* main.m */; };
 		8968862216F92ECE00B440B7 /* Voir_Dire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8968862016F92ECE00B440B7 /* Voir_Dire.xcdatamodeld */; };
 		8968863216F931C500B440B7 /* VDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968863116F931C500B440B7 /* VDViewController.m */; };
@@ -164,6 +165,8 @@
 		894AF8CC1703E42E0052D19E /* avatar_luchadore_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_luchadore_green.png; sourceTree = "<group>"; };
 		894AF8CE1703E5C30052D19E /* avatar_americanindian_female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_americanindian_female.png; sourceTree = "<group>"; };
 		894AF8CF1703E5C30052D19E /* avatar_americanindian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_americanindian_male.png; sourceTree = "<group>"; };
+		894AF8D21703F2940052D19E /* VDStartupNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDStartupNavigationBar.h; sourceTree = "<group>"; };
+		894AF8D31703F2940052D19E /* VDStartupNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDStartupNavigationBar.m; sourceTree = "<group>"; };
 		8968861216F92E7D00B440B7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Resources/main.m; sourceTree = "<group>"; };
 		8968861316F92E7D00B440B7 /* Voir Dire-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Voir Dire-Info.plist"; path = "Resources/Voir Dire-Info.plist"; sourceTree = "<group>"; };
 		8968861416F92E7D00B440B7 /* Voir Dire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Voir Dire-Prefix.pch"; path = "Resources/Voir Dire-Prefix.pch"; sourceTree = "<group>"; };
@@ -405,6 +408,8 @@
 			children = (
 				8968865916F93DDE00B440B7 /* VDStartupPageViewController.h */,
 				8968865A16F93DDE00B440B7 /* VDStartupPageViewController.m */,
+				894AF8D21703F2940052D19E /* VDStartupNavigationBar.h */,
+				894AF8D31703F2940052D19E /* VDStartupNavigationBar.m */,
 			);
 			path = AppFlow;
 			sourceTree = "<group>";
@@ -709,6 +714,7 @@
 				89B2AA2C16FFB8C9008E10BA /* VDJurorNote.m in Sources */,
 				89038E4517012A4F00683FAB /* VDJurorDetailsViewController.m in Sources */,
 				894AF8CB1703E37D0052D19E /* VDJurorToAvatar.m in Sources */,
+				894AF8D41703F2940052D19E /* VDStartupNavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
