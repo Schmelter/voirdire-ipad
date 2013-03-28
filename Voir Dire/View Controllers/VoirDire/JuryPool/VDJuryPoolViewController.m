@@ -11,6 +11,7 @@
 #import "VDJurorManager.h"
 #import "VDJurorViewCell.h"
 #import <stdlib.h>
+#import "VDJurorToAvatar.h"
 
 @interface VDJuryPoolViewController ()
 
@@ -62,29 +63,8 @@
     
     cell.number.text = juror.jurorNumber;
     
-    if (juror.race == VDRace_White) {
-        cell.avatar.backgroundColor = [UIColor lightGrayColor];
-    } else if (juror.race == VDRace_Black) {
-        cell.avatar.backgroundColor = [UIColor grayColor];
-    } else if (juror.race == VDRace_AmericanIndian) {
-        cell.avatar.backgroundColor = [UIColor redColor];
-    } else if (juror.race == VDRace_Asian) {
-        cell.avatar.backgroundColor = [UIColor yellowColor];
-    } else if (juror.race == VDRace_PacificIslander) {
-        cell.avatar.backgroundColor = [UIColor blueColor];
-    } else if (juror.race == VDRace_HispanicLatino) {
-        cell.avatar.backgroundColor = [UIColor brownColor];
-    } else if (juror.race == VDRace_Other) {
-        cell.avatar.backgroundColor = [UIColor orangeColor];
-    }
-    
-    if (juror.gender == VDGender_Male) {
-        cell.gender.text = @"Male";
-    } else if (juror.gender == VDGender_Female) {
-        cell.gender.text = @"Female";
-    } else {
-        cell.gender.text = @"Other";
-    }
+    UIImage *avatarImage = [VDJurorToAvatar jurorToAvatar:juror];
+    cell.avatar.image = avatarImage;
     
     NSMutableString *ratingStr = [[NSMutableString alloc] initWithCapacity:5];
     for (NSInteger i = 0; i < juror.rating; i++) {

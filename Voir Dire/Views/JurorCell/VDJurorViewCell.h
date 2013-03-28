@@ -11,8 +11,7 @@
 @interface VDJurorViewCell : UICollectionViewCell
 
 @property (nonatomic, readwrite, weak) IBOutlet UILabel *number;
-@property (nonatomic, readwrite, weak) IBOutlet UILabel *gender;
-@property (nonatomic, readwrite, weak) IBOutlet UIView *avatar;
+@property (nonatomic, readwrite, weak) IBOutlet UIImageView *avatar;
 @property (nonatomic, readwrite, weak) IBOutlet UILabel *starRating;
 @property (nonatomic, readwrite, weak) IBOutlet UIView *pipOne;
 @property (nonatomic, readwrite, weak) IBOutlet UIView *pipTwo;

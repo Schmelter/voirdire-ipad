@@ -60,6 +60,10 @@
 		894AF8C61703E2C50052D19E /* avatar_pacificislander_male.png in Resources */ = {isa = PBXBuildFile; fileRef = 894AF8B91703E2C40052D19E /* avatar_pacificislander_male.png */; };
 		894AF8C71703E2C50052D19E /* avatar_white_female.png in Resources */ = {isa = PBXBuildFile; fileRef = 894AF8BA1703E2C40052D19E /* avatar_white_female.png */; };
 		894AF8C81703E2C50052D19E /* avatar_white_male.png in Resources */ = {isa = PBXBuildFile; fileRef = 894AF8BB1703E2C40052D19E /* avatar_white_male.png */; };
+		894AF8CB1703E37D0052D19E /* VDJurorToAvatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 894AF8CA1703E37C0052D19E /* VDJurorToAvatar.m */; };
+		894AF8CD1703E42E0052D19E /* avatar_luchadore_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 894AF8CC1703E42E0052D19E /* avatar_luchadore_green.png */; };
+		894AF8D01703E5C30052D19E /* avatar_americanindian_female.png in Resources */ = {isa = PBXBuildFile; fileRef = 894AF8CE1703E5C30052D19E /* avatar_americanindian_female.png */; };
+		894AF8D11703E5C30052D19E /* avatar_americanindian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = 894AF8CF1703E5C30052D19E /* avatar_americanindian_male.png */; };
 		8968861516F92E7D00B440B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968861216F92E7D00B440B7 /* main.m */; };
 		8968862216F92ECE00B440B7 /* Voir_Dire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8968862016F92ECE00B440B7 /* Voir_Dire.xcdatamodeld */; };
 		8968863216F931C500B440B7 /* VDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968863116F931C500B440B7 /* VDViewController.m */; };
@@ -155,6 +159,11 @@
 		894AF8B91703E2C40052D19E /* avatar_pacificislander_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_pacificislander_male.png; sourceTree = "<group>"; };
 		894AF8BA1703E2C40052D19E /* avatar_white_female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_white_female.png; sourceTree = "<group>"; };
 		894AF8BB1703E2C40052D19E /* avatar_white_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_white_male.png; sourceTree = "<group>"; };
+		894AF8C91703E37C0052D19E /* VDJurorToAvatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDJurorToAvatar.h; sourceTree = "<group>"; };
+		894AF8CA1703E37C0052D19E /* VDJurorToAvatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDJurorToAvatar.m; sourceTree = "<group>"; };
+		894AF8CC1703E42E0052D19E /* avatar_luchadore_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_luchadore_green.png; sourceTree = "<group>"; };
+		894AF8CE1703E5C30052D19E /* avatar_americanindian_female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_americanindian_female.png; sourceTree = "<group>"; };
+		894AF8CF1703E5C30052D19E /* avatar_americanindian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_americanindian_male.png; sourceTree = "<group>"; };
 		8968861216F92E7D00B440B7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Resources/main.m; sourceTree = "<group>"; };
 		8968861316F92E7D00B440B7 /* Voir Dire-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Voir Dire-Info.plist"; path = "Resources/Voir Dire-Info.plist"; sourceTree = "<group>"; };
 		8968861416F92E7D00B440B7 /* Voir Dire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Voir Dire-Prefix.pch"; path = "Resources/Voir Dire-Prefix.pch"; sourceTree = "<group>"; };
@@ -260,6 +269,9 @@
 		8968861716F92E9200B440B7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				894AF8CE1703E5C30052D19E /* avatar_americanindian_female.png */,
+				894AF8CF1703E5C30052D19E /* avatar_americanindian_male.png */,
+				894AF8CC1703E42E0052D19E /* avatar_luchadore_green.png */,
 				894AF8AF1703E2C40052D19E /* avatar_asian_female.png */,
 				894AF8B01703E2C40052D19E /* avatar_asian_male.png */,
 				894AF8B11703E2C40052D19E /* avatar_black_female.png */,
@@ -352,6 +364,8 @@
 		8968862516F92EEC00B440B7 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				894AF8C91703E37C0052D19E /* VDJurorToAvatar.h */,
+				894AF8CA1703E37C0052D19E /* VDJurorToAvatar.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -652,6 +666,9 @@
 				894AF8C61703E2C50052D19E /* avatar_pacificislander_male.png in Resources */,
 				894AF8C71703E2C50052D19E /* avatar_white_female.png in Resources */,
 				894AF8C81703E2C50052D19E /* avatar_white_male.png in Resources */,
+				894AF8CD1703E42E0052D19E /* avatar_luchadore_green.png in Resources */,
+				894AF8D01703E5C30052D19E /* avatar_americanindian_female.png in Resources */,
+				894AF8D11703E5C30052D19E /* avatar_americanindian_male.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +708,7 @@
 				89B2AA2316FFA9A7008E10BA /* VDJurorViewCell.m in Sources */,
 				89B2AA2C16FFB8C9008E10BA /* VDJurorNote.m in Sources */,
 				89038E4517012A4F00683FAB /* VDJurorDetailsViewController.m in Sources */,
+				894AF8CB1703E37D0052D19E /* VDJurorToAvatar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

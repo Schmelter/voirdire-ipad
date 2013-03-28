@@ -9,6 +9,7 @@
 #import "VDJurorDetailsViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "VDJurorNote.h"
+#import "VDJurorToAvatar.h"
 
 @interface VDJurorDetailsViewController ()
 
@@ -17,7 +18,7 @@
 @property (nonatomic, readwrite, weak) IBOutlet UILabel *lastName;
 @property (nonatomic, readwrite, weak) IBOutlet UILabel *gender;
 @property (nonatomic, readwrite, weak) IBOutlet UILabel *maritalStatus;
-@property (nonatomic, readwrite, weak) IBOutlet UIView *avatar;
+@property (nonatomic, readwrite, weak) IBOutlet UIImageView *avatar;
 @property (nonatomic, readwrite, weak) IBOutlet UILabel *starRating;
 @property (nonatomic, readwrite, weak) IBOutlet UIView *pipOne;
 @property (nonatomic, readwrite, weak) IBOutlet UIView *pipTwo;
@@ -81,21 +82,8 @@
     self.firstName.text = juror.nameFirst;
     self.lastName.text = juror.nameLast;
     
-    if (juror.race == VDRace_White) {
-        self.avatar.backgroundColor = [UIColor lightGrayColor];
-    } else if (juror.race == VDRace_Black) {
-        self.avatar.backgroundColor = [UIColor grayColor];
-    } else if (juror.race == VDRace_AmericanIndian) {
-        self.avatar.backgroundColor = [UIColor redColor];
-    } else if (juror.race == VDRace_Asian) {
-        self.avatar.backgroundColor = [UIColor yellowColor];
-    } else if (juror.race == VDRace_PacificIslander) {
-        self.avatar.backgroundColor = [UIColor blueColor];
-    } else if (juror.race == VDRace_HispanicLatino) {
-        self.avatar.backgroundColor = [UIColor brownColor];
-    } else if (juror.race == VDRace_Other) {
-        self.avatar.backgroundColor = [UIColor orangeColor];
-    }
+    UIImage *avatarImage = [VDJurorToAvatar jurorToAvatar:juror];
+    self.avatar.image = avatarImage;
     
     if (juror.gender == VDGender_Male) {
         self.gender.text = @"Male";
