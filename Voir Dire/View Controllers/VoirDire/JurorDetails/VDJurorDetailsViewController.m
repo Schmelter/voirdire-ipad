@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "VDJurorNote.h"
 #import "VDJurorToAvatar.h"
+#import "VDConstants.h"
 
 @interface VDJurorDetailsViewController ()
 
@@ -20,13 +21,14 @@
 @property (nonatomic, readwrite, weak) IBOutlet UILabel *maritalStatus;
 @property (nonatomic, readwrite, weak) IBOutlet UIImageView *avatar;
 @property (nonatomic, readwrite, weak) IBOutlet UILabel *starRating;
-@property (nonatomic, readwrite, weak) IBOutlet UIView *pipOne;
-@property (nonatomic, readwrite, weak) IBOutlet UIView *pipTwo;
-@property (nonatomic, readwrite, weak) IBOutlet UIView *pipThree;
-@property (nonatomic, readwrite, weak) IBOutlet UIView *pipFour;
+@property (nonatomic, readwrite, weak) IBOutlet UIImageView *pipOne;
+@property (nonatomic, readwrite, weak) IBOutlet UIImageView *pipTwo;
+@property (nonatomic, readwrite, weak) IBOutlet UIImageView *pipThree;
+@property (nonatomic, readwrite, weak) IBOutlet UIImageView *pipFour;
 @property (nonatomic, readwrite, weak) IBOutlet UILabel *notes;
 @property (nonatomic, readwrite, weak) IBOutlet UILabel *noteCount;
 @property (nonatomic, readwrite, weak) IBOutlet UIScrollView *notesScrollView;
+@property (nonatomic, readwrite, weak) IBOutlet UIView *notesScrollContentView;
 @property (nonatomic, readwrite) NSInteger currentNote;
 
 -(IBAction)xPushed:(id)sender;
@@ -68,6 +70,11 @@
     
     self.view.layer.borderColor = [UIColor blackColor].CGColor;
     self.view.layer.borderWidth = 2.0f;
+    
+    _notesScrollView.layer.borderColor = VD_GRADIENT_COLOR_GRAY.CGColor;
+    _notesScrollView.layer.borderWidth = 1.5f;
+    _notesScrollView.layer.cornerRadius = 10;
+    _notesScrollView.layer.masksToBounds = YES;
     
     [super viewWillAppear:animated];
 }
@@ -112,21 +119,15 @@
     }
     self.starRating.text = ratingStr;
     
-    self.pipOne.backgroundColor = [UIColor redColor];
-    self.pipTwo.backgroundColor = [UIColor blueColor];
-    self.pipThree.backgroundColor = [UIColor yellowColor];
-    self.pipFour.backgroundColor = [UIColor orangeColor];
-    
     
     self.noteCount.text = [NSString stringWithFormat:@"%i / %i", self.currentNote, [juror.jurorNotes count]];
     if ([juror.jurorNotes count] > 0) {
         NSString *note = [[juror.jurorNotes objectAtIndex:(self.currentNote-1)] notes];
-        CGSize noteSize = [note sizeWithFont:self.notes.font forWidth:self.notesScrollView.frame.size.width lineBreakMode:NSLineBreakByWordWrapping];
-        self.notes.frame = CGRectMake(self.notes.frame.origin.x, self.notes.frame.origin.y, noteSize.width, noteSize.height);
-        NSLog(@"Notes Frame: %@", NSStringFromCGRect( self.notes.frame));
-        self.notesScrollView.contentSize = noteSize;
-        NSLog(@"NoteSize: %@", NSStringFromCGSize(noteSize));
         self.notes.text = note;
+        CGSize noteSize = [note sizeWithFont:self.notes.font forWidth:(self.notesScrollView.frame.size.width - 10) lineBreakMode:NSLineBreakByWordWrapping];
+        self.notes.frame = CGRectMake(5, 5, noteSize.width, noteSize.height);
+        self.notesScrollContentView.frame = CGRectMake(0, 0, self.notes.frame.size.width+10, self.notes.frame.size.height+10);
+        self.notesScrollView.contentSize = self.notesScrollContentView.frame.size;
     }
 }
 

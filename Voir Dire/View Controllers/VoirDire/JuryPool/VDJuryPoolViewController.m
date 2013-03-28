@@ -72,10 +72,6 @@
     }
     cell.starRating.text = ratingStr;
     
-    cell.pipOne.backgroundColor = [UIColor redColor];
-    cell.pipTwo.backgroundColor = [UIColor blueColor];
-    cell.pipThree.backgroundColor = [UIColor yellowColor];
-    cell.pipFour.backgroundColor = [UIColor orangeColor];
     return cell;
 }
 

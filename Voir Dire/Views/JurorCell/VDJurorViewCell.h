@@ -13,9 +13,9 @@
 @property (nonatomic, readwrite, weak) IBOutlet UILabel *number;
 @property (nonatomic, readwrite, weak) IBOutlet UIImageView *avatar;
 @property (nonatomic, readwrite, weak) IBOutlet UILabel *starRating;
-@property (nonatomic, readwrite, weak) IBOutlet UIView *pipOne;
-@property (nonatomic, readwrite, weak) IBOutlet UIView *pipTwo;
-@property (nonatomic, readwrite, weak) IBOutlet UIView *pipThree;
-@property (nonatomic, readwrite, weak) IBOutlet UIView *pipFour;
+@property (nonatomic, readwrite, weak) IBOutlet UIImageView *pipOne;
+@property (nonatomic, readwrite, weak) IBOutlet UIImageView *pipTwo;
+@property (nonatomic, readwrite, weak) IBOutlet UIImageView *pipThree;
+@property (nonatomic, readwrite, weak) IBOutlet UIImageView *pipFour;
 
 @end
