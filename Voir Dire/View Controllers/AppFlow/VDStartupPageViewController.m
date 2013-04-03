@@ -18,7 +18,6 @@
 -(IBAction)forwardPressed:(id)sender;
 -(IBAction)backPressed:(id)sender;
 -(IBAction)homePressed:(id)sender;
--(IBAction)logoutPressed:(id)sender;
 
 @end
 
@@ -64,10 +63,6 @@
 
 -(IBAction)homePressed:(id)sender {
 
-}
-
--(IBAction)logoutPressed:(id)sender {
-    [self.rootVC presentLoginViewController];
 }
 
 @end
