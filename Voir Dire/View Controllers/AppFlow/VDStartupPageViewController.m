@@ -9,17 +9,19 @@
 #import "VDStartupPageViewController.h"
 #import "VDHomeViewController.h"
 #import "VDRootViewController.h"
+#import "VDBackHandleButton.h"
+#import "VDHomeHandleButton.h"
 
 @interface VDStartupPageViewController ()
 
 @property (nonatomic, readwrite, weak) IBOutlet UINavigationController *navigationController;
 @property (nonatomic, readwrite, weak) IBOutlet UIButton *forwardButton;
-@property (nonatomic, readwrite, weak) IBOutlet UIButton *backButton;
+@property (nonatomic, readwrite, weak) IBOutlet VDBackHandleButton *backButton;
+@property (nonatomic, readwrite, weak) IBOutlet UILabel *titleLabel;
 
 -(IBAction)forwardPressed:(id)sender;
--(IBAction)backPressed:(id)sender;
--(IBAction)homePressed:(id)sender;
--(IBAction)logoutPressed:(id)sender;
+-(void)backPressed;
+-(void)homePressed;
 
 @end
 
@@ -39,17 +41,24 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    _forwardButton.enabled = NO;
-    _backButton.enabled = NO;
-    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"AppFlow" bundle:nil];
     VDHomeViewController *homeViewController = [storyboard instantiateViewControllerWithIdentifier:@"VDHomeViewController"];
     [self presentVDViewController:homeViewController animated:YES completion:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(backPressed)
+                                                 name:kVDNotificationBackPressed
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(homePressed)
+                                                 name:kVDNotificationHomePressed
+                                               object:nil];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([@"EmbedUINavigationControllerSegue" isEqualToString:segue.identifier]) {
         self.navigationController = segue.destinationViewController;
+        self.navigationController.delegate = self;
     }
 }
 
@@ -65,16 +74,41 @@
     
 }
 
--(IBAction)backPressed:(id)sender {
-    
+-(void)backPressed {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
--(IBAction)homePressed:(id)sender {
-
+-(void)homePressed {
+    __block VDHomeViewController *homeVC;
+    [self.navigationController.viewControllers enumerateObjectsUsingBlock:^(VDViewController* viewController, NSUInteger idx, BOOL *stop) {
+        if ([viewController isKindOfClass:([VDHomeViewController class])]) {
+            homeVC = (VDHomeViewController*) viewController;
+            *stop = YES;
+        }
+    }];
+    [self.navigationController popToViewController:homeVC animated:YES];
 }
 
--(IBAction)logoutPressed:(id)sender {
-    [self.rootVC presentLoginViewController];
+#pragma mark - UINavigationControllerDelegate methods
+
+-(void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+}
+
+-(void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if (viewController.navigationItem != nil) {
+        self.titleLabel.text = viewController.navigationItem.title;
+    }
+}
+
+#pragma mark ---
+
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:kVDNotificationBackPressed
+                                                  object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:kVDNotificationHomePressed
+                                                  object:nil];
 }
 
 @end

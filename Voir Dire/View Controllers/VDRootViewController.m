@@ -9,6 +9,7 @@
 #import "VDRootViewController.h"
 #import "VDStartupPageViewController.h"
 #import "VDLoginViewController.h"
+#import "VDLogoutHandleButton.h"
 
 static VDRootViewController *instance = nil;
 
@@ -35,6 +36,13 @@ static VDRootViewController *instance = nil;
 }
 
 #pragma mark - View lifecycle
+
+- (void)viewDidLoad {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(presentLoginViewController)
+                                                 name:kVDNotificationLogoutPressed
+                                               object:nil];
+}
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -74,6 +82,12 @@ static VDRootViewController *instance = nil;
     [self.loginVC willMoveToParentViewController:nil];
     [self.loginVC.view removeFromSuperview];
     [self.loginVC removeFromParentViewController];
+}
+
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:kVDNotificationLogoutPressed
+                                                  object:nil];
 }
 
 @end

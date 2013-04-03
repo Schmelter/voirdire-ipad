@@ -9,7 +9,7 @@
 #import "VDViewController.h"
 #import "VDRootViewController.h"
 
-@interface VDStartupPageViewController : UIViewController
+@interface VDStartupPageViewController : UIViewController <UINavigationControllerDelegate>
 
 @property (nonatomic, readwrite, weak) VDRootViewController *rootVC;
 
