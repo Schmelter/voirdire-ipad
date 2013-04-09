@@ -76,7 +76,15 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
+    cell.highlighted = YES;
+    
     [self.voirDireVC displayJurorDetails:indexPath.row ForJurors:self.jurors];
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
+    cell.highlighted = NO;
 }
 #pragma mark ---
 
