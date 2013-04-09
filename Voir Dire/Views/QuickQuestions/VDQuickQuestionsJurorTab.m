@@ -31,7 +31,7 @@
 }
 
 -(IBAction)jurorPressed:(id)sender {
-    [_tabBar selectJurorTab:self];
+    _tabBar.selectedTab = self;
 }
 
 -(void)setSelected:(BOOL)selected {

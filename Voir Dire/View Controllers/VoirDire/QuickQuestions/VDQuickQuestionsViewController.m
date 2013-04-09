@@ -10,6 +10,8 @@
 
 @interface VDQuickQuestionsViewController ()
 
+@property (nonatomic, weak) IBOutlet VDQuickQuestionsTabBar *tabBar;
+
 @end
 
 @implementation VDQuickQuestionsViewController
@@ -29,10 +31,14 @@
 	// Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - VDQuickQuestionsTabBarDelegate methods
+-(void)tabBar:(VDQuickQuestionsTabBar*)tabBar didSelectTab:(VDQuickQuestionsJurorTab*)selectedTab {
+    
 }
+
+-(void)addJurorPressedForTabBar:(VDQuickQuestionsTabBar*)tabBar {
+    
+}
+#pragma mark ---
 
 @end

@@ -14,9 +14,8 @@
 @protocol VDQuickQuestionsTabBarDelegate <NSObject>
 
 @required
--(NSInteger)jurorCountForTabBar:(VDQuickQuestionsTabBar*)tabBar;
--(void)tabBar:(VDQuickQuestionsTabBar*)tabBar jurorTabAdded:(VDQuickQuestionsJurorTab*)jurorTab;
--(void)tabBar:(VDQuickQuestionsTabBar*)tabBar jurorSelected:(VDQuickQuestionsJurorTab*)jurorTab;
+-(void)tabBar:(VDQuickQuestionsTabBar*)tabBar didSelectTab:(VDQuickQuestionsJurorTab*)selectedTab;
+-(void)addJurorPressedForTabBar:(VDQuickQuestionsTabBar*)tabBar;
 
 @end
 
@@ -24,10 +23,10 @@
 
 @interface VDQuickQuestionsTabBar : UIView
 
-@property (nonatomic, weak) id<VDQuickQuestionsTabBarDelegate> delegate;
+@property (nonatomic, weak) IBOutlet id<VDQuickQuestionsTabBarDelegate> delegate;
+@property (nonatomic, strong) NSArray *jurorTabs;
+@property (nonatomic, strong) VDQuickQuestionsJurorTab *selectedTab;
 
 -(void)addJurorPressed;
--(void)selectJurorTab:(VDQuickQuestionsJurorTab*)jurorTab;
--(void)removeJurorTab:(VDQuickQuestionsJurorTab*)jurorTab;
 
 @end

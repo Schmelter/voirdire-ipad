@@ -11,11 +11,13 @@
 #import "VDJurorNote.h"
 #import"VDJurorDetailsViewController.h"
 #import "VDJurorManager.h"
+#import "VDQuickQuestionsViewController.h"
 
 @interface VDVoirDireViewController ()
 
 @property (nonatomic, readwrite, weak) IBOutlet VDJuryPoolViewController *juryPoolVC;
 @property (nonatomic, readwrite, weak) IBOutlet VDJurorDetailsViewController *jurorDetailsVC;
+@property (nonatomic, readwrite, weak) IBOutlet VDQuickQuestionsViewController *quickQuestionsVC;
 
 @end
 
@@ -46,6 +48,8 @@
         } withFailure:^(NSError *error){
             
         }];
+    } else if ([segue.identifier isEqualToString:@"EmbedVDQuickQuestionsViewControllerSegue"]) {
+        self.quickQuestionsVC = segue.destinationViewController;
     }
 }
 

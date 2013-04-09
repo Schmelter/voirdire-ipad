@@ -7,7 +7,8 @@
 //
 
 #import "VDViewController.h"
+#import "VDQuickQuestionsTabBar.h"
 
-@interface VDQuickQuestionsViewController : VDViewController
+@interface VDQuickQuestionsViewController : VDViewController <VDQuickQuestionsTabBarDelegate>
 
 @end
