@@ -8,8 +8,6 @@
 
 #import "VDNotificationManager.h"
 
-static VDNotificationManager *instance = nil;
-
 @implementation VDNotificationManager
 
 -(id)init {

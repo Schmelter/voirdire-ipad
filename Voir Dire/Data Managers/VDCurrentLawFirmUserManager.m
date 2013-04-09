@@ -8,8 +8,6 @@
 
 #import "VDCurrentLawFirmUserManager.h"
 
-static VDCurrentLawFirmUserManager *instance = nil;
-
 @implementation VDCurrentLawFirmUserManager
 
 -(id)init {
