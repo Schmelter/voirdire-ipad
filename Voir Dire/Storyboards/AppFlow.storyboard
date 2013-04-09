@@ -163,7 +163,7 @@
                                 </connections>
                             </containerView>
                             <containerView contentMode="scaleToFill" id="wgI-3y-vgY">
-                                <rect key="frame" x="0.0" y="408" width="1024" height="300"/>
+                                <rect key="frame" x="0.0" y="658" width="1024" height="300"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
@@ -181,6 +181,9 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="quickQuestionsContainer" destination="wgI-3y-vgY" id="b5t-q6-3Kz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmu-3w-3LY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -740,15 +743,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view autoresizesSubviews="NO" contentMode="scaleToFill" id="md8-5g-RSJ" customClass="VDQuickQuestionsTabBar">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="38"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="delegate" destination="wqD-s9-ca8" id="I4E-2G-pAz"/>
                                 </connections>
                             </view>
+                            <containerView contentMode="scaleToFill" id="yuO-bV-iPo">
+                                <rect key="frame" x="0.0" y="50" width="1024" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="4oQ-n0-CvJ" kind="embed" identifier="EmbedTabBarControllerSegue" id="EMe-H3-dmM"/>
+                                </connections>
+                            </containerView>
                         </subviews>
-                        <color key="backgroundColor" red="0.11686783379480491" green="0.70918367346938771" blue="0.56128603552252443" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <toolbarItems/>
@@ -760,6 +771,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F92-3F-WIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1180" y="1779"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="81d-Ak-Lkm">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="4oQ-n0-CvJ" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="HZj-5t-7qL">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="noZ-Xy-P0H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180" y="2258"/>
         </scene>
     </scenes>
     <classes>
@@ -911,6 +938,7 @@
             <relationships>
                 <relationship kind="outlet" name="jurorDetailsVC" candidateClass="VDJurorDetailsViewController"/>
                 <relationship kind="outlet" name="juryPoolVC" candidateClass="VDJuryPoolViewController"/>
+                <relationship kind="outlet" name="quickQuestionsContainer" candidateClass="UIView"/>
                 <relationship kind="outlet" name="quickQuestionsVC" candidateClass="VDQuickQuestionsViewController"/>
             </relationships>
         </class>

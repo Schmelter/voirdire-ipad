@@ -8,7 +8,10 @@
 
 #import "VDViewController.h"
 #import "VDQuickQuestionsTabBar.h"
+#import "VDVoirDireViewController.h"
 
 @interface VDQuickQuestionsViewController : VDViewController <VDQuickQuestionsTabBarDelegate>
+
+@property (nonatomic, weak) VDVoirDireViewController *voirDireVC;
 
 @end

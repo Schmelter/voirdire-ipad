@@ -103,6 +103,8 @@
 		89FA58451714952C00B8B96A /* LICENCE.md in Resources */ = {isa = PBXBuildFile; fileRef = 89FA58431714952C00B8B96A /* LICENCE.md */; };
 		89FA58471714997100B8B96A /* VDQuickQuestionsJurorTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89FA58461714997100B8B96A /* VDQuickQuestionsJurorTab.xib */; };
 		89FA58491714999700B8B96A /* VDQuickQuestionsAddTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89FA58481714999700B8B96A /* VDQuickQuestionsAddTab.xib */; };
+		89FA58501714CF5F00B8B96A /* VDQuickQuestionsQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89FA584F1714CF5F00B8B96A /* VDQuickQuestionsQuestionViewController.xib */; };
+		89FA58531714CFB000B8B96A /* VDQuickQuestionsQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FA58521714CFB000B8B96A /* VDQuickQuestionsQuestionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -243,6 +245,9 @@
 		89FA58431714952C00B8B96A /* LICENCE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.md; sourceTree = "<group>"; };
 		89FA58461714997100B8B96A /* VDQuickQuestionsJurorTab.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VDQuickQuestionsJurorTab.xib; sourceTree = "<group>"; };
 		89FA58481714999700B8B96A /* VDQuickQuestionsAddTab.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VDQuickQuestionsAddTab.xib; sourceTree = "<group>"; };
+		89FA584F1714CF5F00B8B96A /* VDQuickQuestionsQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VDQuickQuestionsQuestionViewController.xib; sourceTree = "<group>"; };
+		89FA58511714CFB000B8B96A /* VDQuickQuestionsQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDQuickQuestionsQuestionViewController.h; sourceTree = "<group>"; };
+		89FA58521714CFB000B8B96A /* VDQuickQuestionsQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDQuickQuestionsQuestionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -621,6 +626,9 @@
 			children = (
 				89FA582B171490DD00B8B96A /* VDQuickQuestionsViewController.h */,
 				89FA582C171490DD00B8B96A /* VDQuickQuestionsViewController.m */,
+				89FA58511714CFB000B8B96A /* VDQuickQuestionsQuestionViewController.h */,
+				89FA58521714CFB000B8B96A /* VDQuickQuestionsQuestionViewController.m */,
+				89FA584F1714CF5F00B8B96A /* VDQuickQuestionsQuestionViewController.xib */,
 			);
 			path = QuickQuestions;
 			sourceTree = "<group>";
@@ -633,9 +641,9 @@
 				89FA58381714920300B8B96A /* VDQuickQuestionsTabBar.xib */,
 				89FA583A1714930C00B8B96A /* VDQuickQuestionsJurorTab.h */,
 				89FA583B1714930C00B8B96A /* VDQuickQuestionsJurorTab.m */,
+				89FA58461714997100B8B96A /* VDQuickQuestionsJurorTab.xib */,
 				89FA583D171493B000B8B96A /* VDQuickQuestionsAddTab.h */,
 				89FA583E171493B000B8B96A /* VDQuickQuestionsAddTab.m */,
-				89FA58461714997100B8B96A /* VDQuickQuestionsJurorTab.xib */,
 				89FA58481714999700B8B96A /* VDQuickQuestionsAddTab.xib */,
 			);
 			path = QuickQuestions;
@@ -757,6 +765,7 @@
 				89FA58451714952C00B8B96A /* LICENCE.md in Resources */,
 				89FA58471714997100B8B96A /* VDQuickQuestionsJurorTab.xib in Resources */,
 				89FA58491714999700B8B96A /* VDQuickQuestionsAddTab.xib in Resources */,
+				89FA58501714CF5F00B8B96A /* VDQuickQuestionsQuestionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,6 +814,7 @@
 				89FA583C1714930C00B8B96A /* VDQuickQuestionsJurorTab.m in Sources */,
 				89FA583F171493B000B8B96A /* VDQuickQuestionsAddTab.m in Sources */,
 				89FA58441714952C00B8B96A /* FXLabel.m in Sources */,
+				89FA58531714CFB000B8B96A /* VDQuickQuestionsQuestionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,4 +1,4 @@
-//
+    //
 //  VDQuickQuestionsTabBar.m
 //  Voir Dire
 //
@@ -45,7 +45,7 @@
         NSArray *customKeys = @[ @"delegate" ];
         [real setValuesForKeysWithDictionary:[self dictionaryWithValuesForKeys:customKeys]];
         
-        [self updateView];
+        [real updateView];
         return real;
     }
     return self;
@@ -83,13 +83,14 @@
 }
 
 -(void)jurorPressed:(VDQuickQuestionsJurorTab*)jurorTab {
-    [self.delegate tabBar:self didSelectTab:jurorTab];
+    self.selectedTab = jurorTab;
 }
 
 -(void)setSelectedTab:(VDQuickQuestionsJurorTab *)selectedTab {
     _selectedTab.selected = NO;
     _selectedTab = selectedTab;
     _selectedTab.selected = YES;
+    [self.delegate tabBar:self didSelectTab:_selectedTab];
 }
 
 @end

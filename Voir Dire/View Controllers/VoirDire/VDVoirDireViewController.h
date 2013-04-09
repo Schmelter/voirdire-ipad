@@ -14,6 +14,7 @@
 @interface VDVoirDireViewController : VDViewController <VDJurorDetailsViewControllerDelegate>
 
 @property (nonatomic, readwrite, strong) VDTrialCase *trialCase;
+@property (nonatomic, readwrite) BOOL quickQuestionsHidden;
 
 -(void)displayJurorDetails:(NSInteger)idx ForJurors:(NSMutableArray*)jurors;
 -(void)dismissJurorDetails;

@@ -28,5 +28,6 @@
 @property (nonatomic, strong) VDQuickQuestionsJurorTab *selectedTab;
 
 -(void)addJurorPressed;
+-(void)jurorPressed:(VDQuickQuestionsJurorTab*)jurorTab;
 
 @end

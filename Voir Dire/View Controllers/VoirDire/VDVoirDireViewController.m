@@ -13,11 +13,15 @@
 #import "VDJurorManager.h"
 #import "VDQuickQuestionsViewController.h"
 
+#define kQuickQuestionsHiddenHeight 50
+#define kQuickQuestionsShownHeight 308
+
 @interface VDVoirDireViewController ()
 
 @property (nonatomic, readwrite, weak) IBOutlet VDJuryPoolViewController *juryPoolVC;
 @property (nonatomic, readwrite, weak) IBOutlet VDJurorDetailsViewController *jurorDetailsVC;
 @property (nonatomic, readwrite, weak) IBOutlet VDQuickQuestionsViewController *quickQuestionsVC;
+@property (nonatomic, readwrite, weak) IBOutlet UIView *quickQuestionsContainer;
 
 @end
 
@@ -50,6 +54,7 @@
         }];
     } else if ([segue.identifier isEqualToString:@"EmbedVDQuickQuestionsViewControllerSegue"]) {
         self.quickQuestionsVC = segue.destinationViewController;
+        self.quickQuestionsVC.voirDireVC = self;
     }
 }
 
@@ -79,5 +84,17 @@
     [self dismissJurorDetails];
 }
 #pragma mark ---
+
+-(void)setQuickQuestionsHidden:(BOOL)quickQuestionsHidden {
+    _quickQuestionsHidden = quickQuestionsHidden;
+    
+    [UIView animateWithDuration:0.5 delay:0.1 options:(UIViewAnimationOptionCurveEaseInOut | UIViewAnimationOptionBeginFromCurrentState) animations:^(void) {
+        if (_quickQuestionsHidden) {
+            self.quickQuestionsContainer.frame = CGRectMake(0, self.view.frame.size.height - kQuickQuestionsHiddenHeight, self.quickQuestionsContainer.frame.size.width, self.quickQuestionsContainer.frame.size.height);
+        } else {
+            self.quickQuestionsContainer.frame = CGRectMake(0, self.view.frame.size.height - kQuickQuestionsShownHeight, self.quickQuestionsContainer.frame.size.width, self.quickQuestionsContainer.frame.size.height);
+        }
+    } completion:nil];    
+}
 
 @end
