@@ -64,6 +64,13 @@
 		894AF8CD1703E42E0052D19E /* avatar_luchadore_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 894AF8CC1703E42E0052D19E /* avatar_luchadore_green.png */; };
 		894AF8D01703E5C30052D19E /* avatar_americanindian_female.png in Resources */ = {isa = PBXBuildFile; fileRef = 894AF8CE1703E5C30052D19E /* avatar_americanindian_female.png */; };
 		894AF8D11703E5C30052D19E /* avatar_americanindian_male.png in Resources */ = {isa = PBXBuildFile; fileRef = 894AF8CF1703E5C30052D19E /* avatar_americanindian_male.png */; };
+		8954B79D17176D22006AE653 /* VDQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8954B79C17176D22006AE653 /* VDQuestion.m */; };
+		8954B7A017176F45006AE653 /* VDJurorQuestionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8954B79F17176F45006AE653 /* VDJurorQuestionManager.m */; };
+		8954B7A9171773B3006AE653 /* VDQuickQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8954B7A8171773B3006AE653 /* VDQuickQuestion.m */; };
+		8954B7AC171773C4006AE653 /* VDJurorQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8954B7AB171773C4006AE653 /* VDJurorQuestion.m */; };
+		8954B7AF171773DB006AE653 /* VDJurorToQuickQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8954B7AE171773DB006AE653 /* VDJurorToQuickQuestion.m */; };
+		8954B7B2171774C2006AE653 /* VDQuickQuestionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8954B7B1171774C2006AE653 /* VDQuickQuestionManager.m */; };
+		8954B7B517177B3B006AE653 /* VDJurorNoteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8954B7B417177B3B006AE653 /* VDJurorNoteManager.m */; };
 		8968861516F92E7D00B440B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968861216F92E7D00B440B7 /* main.m */; };
 		8968862216F92ECE00B440B7 /* Voir_Dire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8968862016F92ECE00B440B7 /* Voir_Dire.xcdatamodeld */; };
 		8968863216F931C500B440B7 /* VDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968863116F931C500B440B7 /* VDViewController.m */; };
@@ -178,6 +185,20 @@
 		894AF8CC1703E42E0052D19E /* avatar_luchadore_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_luchadore_green.png; sourceTree = "<group>"; };
 		894AF8CE1703E5C30052D19E /* avatar_americanindian_female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_americanindian_female.png; sourceTree = "<group>"; };
 		894AF8CF1703E5C30052D19E /* avatar_americanindian_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_americanindian_male.png; sourceTree = "<group>"; };
+		8954B79B17176D22006AE653 /* VDQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDQuestion.h; sourceTree = "<group>"; };
+		8954B79C17176D22006AE653 /* VDQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDQuestion.m; sourceTree = "<group>"; };
+		8954B79E17176F45006AE653 /* VDJurorQuestionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDJurorQuestionManager.h; sourceTree = "<group>"; };
+		8954B79F17176F45006AE653 /* VDJurorQuestionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDJurorQuestionManager.m; sourceTree = "<group>"; };
+		8954B7A7171773B3006AE653 /* VDQuickQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDQuickQuestion.h; sourceTree = "<group>"; };
+		8954B7A8171773B3006AE653 /* VDQuickQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDQuickQuestion.m; sourceTree = "<group>"; };
+		8954B7AA171773C4006AE653 /* VDJurorQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDJurorQuestion.h; sourceTree = "<group>"; };
+		8954B7AB171773C4006AE653 /* VDJurorQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDJurorQuestion.m; sourceTree = "<group>"; };
+		8954B7AD171773DB006AE653 /* VDJurorToQuickQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDJurorToQuickQuestion.h; sourceTree = "<group>"; };
+		8954B7AE171773DB006AE653 /* VDJurorToQuickQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDJurorToQuickQuestion.m; sourceTree = "<group>"; };
+		8954B7B0171774C2006AE653 /* VDQuickQuestionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDQuickQuestionManager.h; sourceTree = "<group>"; };
+		8954B7B1171774C2006AE653 /* VDQuickQuestionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDQuickQuestionManager.m; sourceTree = "<group>"; };
+		8954B7B317177B3B006AE653 /* VDJurorNoteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDJurorNoteManager.h; sourceTree = "<group>"; };
+		8954B7B417177B3B006AE653 /* VDJurorNoteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDJurorNoteManager.m; sourceTree = "<group>"; };
 		8968861216F92E7D00B440B7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Resources/main.m; sourceTree = "<group>"; };
 		8968861316F92E7D00B440B7 /* Voir Dire-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Voir Dire-Info.plist"; path = "Resources/Voir Dire-Info.plist"; sourceTree = "<group>"; };
 		8968861416F92E7D00B440B7 /* Voir Dire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Voir Dire-Prefix.pch"; path = "Resources/Voir Dire-Prefix.pch"; sourceTree = "<group>"; };
@@ -299,6 +320,12 @@
 				890ABC1D16FABC0100BA4B08 /* VDTrialCaseManager.m */,
 				890ABC2B16FAC31400BA4B08 /* VDJurorManager.h */,
 				890ABC2C16FAC31400BA4B08 /* VDJurorManager.m */,
+				8954B79E17176F45006AE653 /* VDJurorQuestionManager.h */,
+				8954B79F17176F45006AE653 /* VDJurorQuestionManager.m */,
+				8954B7B0171774C2006AE653 /* VDQuickQuestionManager.h */,
+				8954B7B1171774C2006AE653 /* VDQuickQuestionManager.m */,
+				8954B7B317177B3B006AE653 /* VDJurorNoteManager.h */,
+				8954B7B417177B3B006AE653 /* VDJurorNoteManager.m */,
 			);
 			path = "Data Managers";
 			sourceTree = "<group>";
@@ -378,6 +405,14 @@
 				890ABC1816FAB6AE00BA4B08 /* VDDataModelEnums.h */,
 				89B2AA2A16FFB8C9008E10BA /* VDJurorNote.h */,
 				89B2AA2B16FFB8C9008E10BA /* VDJurorNote.m */,
+				8954B79B17176D22006AE653 /* VDQuestion.h */,
+				8954B79C17176D22006AE653 /* VDQuestion.m */,
+				8954B7A7171773B3006AE653 /* VDQuickQuestion.h */,
+				8954B7A8171773B3006AE653 /* VDQuickQuestion.m */,
+				8954B7AA171773C4006AE653 /* VDJurorQuestion.h */,
+				8954B7AB171773C4006AE653 /* VDJurorQuestion.m */,
+				8954B7AD171773DB006AE653 /* VDJurorToQuickQuestion.h */,
+				8954B7AE171773DB006AE653 /* VDJurorToQuickQuestion.m */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -815,6 +850,13 @@
 				89FA583F171493B000B8B96A /* VDQuickQuestionsAddTab.m in Sources */,
 				89FA58441714952C00B8B96A /* FXLabel.m in Sources */,
 				89FA58531714CFB000B8B96A /* VDQuickQuestionsQuestionViewController.m in Sources */,
+				8954B79D17176D22006AE653 /* VDQuestion.m in Sources */,
+				8954B7A017176F45006AE653 /* VDJurorQuestionManager.m in Sources */,
+				8954B7A9171773B3006AE653 /* VDQuickQuestion.m in Sources */,
+				8954B7AC171773C4006AE653 /* VDJurorQuestion.m in Sources */,
+				8954B7AF171773DB006AE653 /* VDJurorToQuickQuestion.m in Sources */,
+				8954B7B2171774C2006AE653 /* VDQuickQuestionManager.m in Sources */,
+				8954B7B517177B3B006AE653 /* VDJurorNoteManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

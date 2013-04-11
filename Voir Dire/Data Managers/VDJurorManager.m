@@ -86,20 +86,6 @@ static NSMutableDictionary *trialCaseIDToJurors = nil;
             juror.sexualOrientation = VDSexualOrientation_Straight;
             juror.rating = arc4random() % 6;
             
-            NSInteger noteCount = (arc4random() % 20) + 1;
-            NSMutableArray *jurorNotes = [[NSMutableArray alloc] initWithCapacity:noteCount];
-            for (NSInteger i = 0; i < noteCount; i++) {
-                VDJurorNote *note = [[VDJurorNote alloc] init];
-                note.jurorNoteID = i;
-                note.jurorNoteID = juror.jurorID;
-                note.trialCaseID = juror.trialCaseID;
-                note.dateTimeStamp = [NSDate dateWithTimeIntervalSinceNow:-50000];
-                note.notes = [NSString stringWithFormat:@"Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i Example Note #%i", i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i, i];
-                
-                [jurorNotes addObject:note];
-            }
-            juror.jurorNotes = jurorNotes;
-            
             [jurors addObject:juror];
         }
         [trialCaseIDToJurors setObject:jurors forKey:[NSNumber numberWithInt:trialCase.trialCaseID]];

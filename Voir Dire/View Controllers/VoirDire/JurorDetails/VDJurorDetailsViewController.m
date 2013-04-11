@@ -11,6 +11,7 @@
 #import "VDJurorNote.h"
 #import "VDJurorToAvatar.h"
 #import "VDConstants.h"
+#import "VDJurorNoteManager.h"
 
 @interface VDJurorDetailsViewController ()
 
@@ -30,6 +31,7 @@
 @property (nonatomic, readwrite, weak) IBOutlet UIScrollView *notesScrollView;
 @property (nonatomic, readwrite, weak) IBOutlet UIView *notesScrollContentView;
 @property (nonatomic, readwrite) NSInteger currentNote;
+@property (nonatomic, readwrite, strong) NSArray *jurorNotes;
 
 -(IBAction)xPushed:(id)sender;
 -(IBAction)notesLeftPressed:(id)sender;
@@ -119,15 +121,22 @@
     }
     self.starRating.text = ratingStr;
     
-    
-    self.noteCount.text = [NSString stringWithFormat:@"%i / %i", self.currentNote, [juror.jurorNotes count]];
-    if ([juror.jurorNotes count] > 0) {
-        NSString *note = [[juror.jurorNotes objectAtIndex:(self.currentNote-1)] notes];
-        self.notes.text = note;
-        CGSize noteSize = [note sizeWithFont:self.notes.font forWidth:(self.notesScrollView.frame.size.width - 10) lineBreakMode:NSLineBreakByWordWrapping];
-        self.notes.frame = CGRectMake(5, 5, noteSize.width, noteSize.height);
-        self.notesScrollContentView.frame = CGRectMake(0, 0, self.notes.frame.size.width+10, self.notes.frame.size.height+10);
-        self.notesScrollView.contentSize = self.notesScrollContentView.frame.size;
+    if (juror) {
+        [VDJurorNoteManager notesForJuror:juror withSuccessHandler:^(NSMutableArray *jurorNotes){
+            self.jurorNotes = jurorNotes;
+            
+            self.noteCount.text = [NSString stringWithFormat:@"%i / %i", self.currentNote, [_jurorNotes count]];
+            if ([_jurorNotes count] > 0) {
+                NSString *note = [[_jurorNotes objectAtIndex:(self.currentNote-1)] notes];
+                self.notes.text = note;
+                CGSize noteSize = [note sizeWithFont:self.notes.font forWidth:(self.notesScrollView.frame.size.width - 10) lineBreakMode:NSLineBreakByWordWrapping];
+                self.notes.frame = CGRectMake(5, 5, noteSize.width, noteSize.height);
+                self.notesScrollContentView.frame = CGRectMake(0, 0, self.notes.frame.size.width+10, self.notes.frame.size.height+10);
+                self.notesScrollView.contentSize = self.notesScrollContentView.frame.size;
+            }
+        } withFailure:^(NSError *error){
+            
+        }];
     }
 }
 
@@ -139,8 +148,7 @@
 }
 
 -(IBAction)notesRightPressed:(id)sender {
-    VDJuror *juror = [self.jurors objectAtIndex:_jurorIdx];
-    if (self.currentNote < [juror.jurorNotes count]) {
+    if (self.currentNote < [_jurorNotes count]) {
         self.currentNote += 1;
         [self updateJurorDetails];
     }
