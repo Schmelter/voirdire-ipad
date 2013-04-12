@@ -15,6 +15,4 @@
 
 +(void)quickQuestionsForTrialCase:(VDTrialCase*)trialCase withSuccessHandler:(void(^)(NSMutableArray*))success withFailure:(void(^)(NSError*)) failure;
 
-+(void)quickQuestionsForJuror:(VDJuror*)juror withSuccessHandler:(void(^)(NSMutableArray*))success withFailure:(void(^)(NSError*))failure;
-
 @end

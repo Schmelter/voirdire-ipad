@@ -10,7 +10,7 @@
 
 @interface VDQuickQuestion : NSObject
 
-@property (nonatomic, readwrite) NSInteger quickQuestionID, lawFirmUserID;
+@property (nonatomic, readwrite) NSInteger quickQuestionID, lawFirmUserID, trialCaseID;
 @property (nonatomic, readwrite, strong) NSDate *dateTimeStamp;
 @property (nonatomic, readwrite, strong) NSString *question;
 
