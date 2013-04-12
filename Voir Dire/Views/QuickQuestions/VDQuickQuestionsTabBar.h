@@ -21,13 +21,17 @@
 
 
 
-@interface VDQuickQuestionsTabBar : UIView
+@interface VDQuickQuestionsTabBar : UIView {
+    @private
+    NSMutableArray *_jurorTabs;
+}
 
 @property (nonatomic, weak) IBOutlet id<VDQuickQuestionsTabBarDelegate> delegate;
-@property (nonatomic, strong) NSArray *jurorTabs;
+@property (nonatomic, readonly, strong) NSArray *jurorTabs;
 @property (nonatomic, strong) VDQuickQuestionsJurorTab *selectedTab;
 
 -(void)addJurorPressed;
 -(void)jurorPressed:(VDQuickQuestionsJurorTab*)jurorTab;
+-(void)addJurorTab:(VDQuickQuestionsJurorTab*)jurorTab;
 
 @end

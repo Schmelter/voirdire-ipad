@@ -22,6 +22,8 @@
 
 @implementation VDQuickQuestionsTabBar
 
+@synthesize jurorTabs = _jurorTabs;
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -44,6 +46,8 @@
         // Transfer custom properties
         NSArray *customKeys = @[ @"delegate" ];
         [real setValuesForKeysWithDictionary:[self dictionaryWithValuesForKeys:customKeys]];
+        
+        real.jurorTabs = [[NSMutableArray alloc] initWithCapacity:10];
         
         [real updateView];
         return real;
@@ -73,7 +77,7 @@
     [self setNeedsDisplay];
 }
 
--(void)setJurorTabs:(NSArray *)jurorTabs {
+-(void)setJurorTabs:(NSMutableArray *)jurorTabs {
     _jurorTabs = jurorTabs;
     [self updateView];
 }
@@ -91,6 +95,11 @@
     _selectedTab = selectedTab;
     _selectedTab.selected = YES;
     [self.delegate tabBar:self didSelectTab:_selectedTab];
+}
+
+-(void)addJurorTab:(VDQuickQuestionsJurorTab *)jurorTab {
+    [_jurorTabs addObject:jurorTab];
+    [self updateView];
 }
 
 @end
