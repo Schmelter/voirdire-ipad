@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "VDQuickQuestion.h"
+#import "VDCompoundQuickQuestion.h"
 #import "VDJuror.h"
 #import "VDTrialCase.h"
 

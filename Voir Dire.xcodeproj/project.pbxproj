@@ -71,6 +71,7 @@
 		8954B7AF171773DB006AE653 /* VDJurorToQuickQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8954B7AE171773DB006AE653 /* VDJurorToQuickQuestion.m */; };
 		8954B7B2171774C2006AE653 /* VDQuickQuestionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8954B7B1171774C2006AE653 /* VDQuickQuestionManager.m */; };
 		8954B7B517177B3B006AE653 /* VDJurorNoteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8954B7B417177B3B006AE653 /* VDJurorNoteManager.m */; };
+		8954B7B917178A0C006AE653 /* VDCompoundQuickQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8954B7B817178A0C006AE653 /* VDCompoundQuickQuestion.m */; };
 		8968861516F92E7D00B440B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968861216F92E7D00B440B7 /* main.m */; };
 		8968862216F92ECE00B440B7 /* Voir_Dire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8968862016F92ECE00B440B7 /* Voir_Dire.xcdatamodeld */; };
 		8968863216F931C500B440B7 /* VDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8968863116F931C500B440B7 /* VDViewController.m */; };
@@ -199,6 +200,8 @@
 		8954B7B1171774C2006AE653 /* VDQuickQuestionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDQuickQuestionManager.m; sourceTree = "<group>"; };
 		8954B7B317177B3B006AE653 /* VDJurorNoteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDJurorNoteManager.h; sourceTree = "<group>"; };
 		8954B7B417177B3B006AE653 /* VDJurorNoteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDJurorNoteManager.m; sourceTree = "<group>"; };
+		8954B7B717178A0C006AE653 /* VDCompoundQuickQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDCompoundQuickQuestion.h; sourceTree = "<group>"; };
+		8954B7B817178A0C006AE653 /* VDCompoundQuickQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDCompoundQuickQuestion.m; sourceTree = "<group>"; };
 		8968861216F92E7D00B440B7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Resources/main.m; sourceTree = "<group>"; };
 		8968861316F92E7D00B440B7 /* Voir Dire-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Voir Dire-Info.plist"; path = "Resources/Voir Dire-Info.plist"; sourceTree = "<group>"; };
 		8968861416F92E7D00B440B7 /* Voir Dire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Voir Dire-Prefix.pch"; path = "Resources/Voir Dire-Prefix.pch"; sourceTree = "<group>"; };
@@ -328,6 +331,15 @@
 				8954B7B417177B3B006AE653 /* VDJurorNoteManager.m */,
 			);
 			path = "Data Managers";
+			sourceTree = "<group>";
+		};
+		8954B7B6171789FF006AE653 /* Compound Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				8954B7B717178A0C006AE653 /* VDCompoundQuickQuestion.h */,
+				8954B7B817178A0C006AE653 /* VDCompoundQuickQuestion.m */,
+			);
+			path = "Compound Data Model";
 			sourceTree = "<group>";
 		};
 		8968861716F92E9200B440B7 /* Images */ = {
@@ -544,6 +556,7 @@
 				8968862516F92EEC00B440B7 /* Util */,
 				8968862416F92EE400B440B7 /* Storyboards */,
 				8968862316F92EDC00B440B7 /* Protocols */,
+				8954B7B6171789FF006AE653 /* Compound Data Model */,
 				8968861F16F92ECE00B440B7 /* Data Model */,
 				890ABC1116FAB36F00BA4B08 /* Data Managers */,
 				8968861E16F92EBC00B440B7 /* Categories */,
@@ -857,6 +870,7 @@
 				8954B7AF171773DB006AE653 /* VDJurorToQuickQuestion.m in Sources */,
 				8954B7B2171774C2006AE653 /* VDQuickQuestionManager.m in Sources */,
 				8954B7B517177B3B006AE653 /* VDJurorNoteManager.m in Sources */,
+				8954B7B917178A0C006AE653 /* VDCompoundQuickQuestion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

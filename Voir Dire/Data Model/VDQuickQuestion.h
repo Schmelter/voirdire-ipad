@@ -14,6 +14,4 @@
 @property (nonatomic, readwrite, strong) NSDate *dateTimeStamp;
 @property (nonatomic, readwrite, strong) NSString *question;
 
-@property (nonatomic, readwrite, strong) NSArray *jurorToQuickQuestions;
-
 @end

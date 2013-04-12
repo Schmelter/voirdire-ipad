@@ -8,8 +8,6 @@
 
 #import "VDTrialCaseManager.h"
 
-static VDTrialCaseManager *instance;
-
 @implementation VDTrialCaseManager
 
 -(id)init {

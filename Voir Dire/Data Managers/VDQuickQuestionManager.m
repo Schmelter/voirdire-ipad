@@ -29,19 +29,20 @@ static NSMutableDictionary *trialCaseIDToQuickQuestions = nil;
         [VDJurorManager jurorsForTrialCase:trialCase withSuccessHandler:^(NSMutableArray *jurors){
             quickQuestions = [[NSMutableArray alloc] initWithCapacity:5];
             for (NSInteger i = 0; i < 5; i++) {
-                VDQuickQuestion *quickQuestion = [[VDQuickQuestion alloc] init];
+                VDCompoundQuickQuestion *compound = [[VDCompoundQuickQuestion alloc] init];
+                compound.quickQuestion = [[VDQuickQuestion alloc] init];
                 
-                quickQuestion.quickQuestionID = i;
-                quickQuestion.lawFirmUserID = 0;
-                quickQuestion.trialCaseID = trialCase.trialCaseID;
-                quickQuestion.dateTimeStamp = [[NSDate alloc] initWithTimeIntervalSinceNow:-10000];
-                quickQuestion.question = [NSString stringWithFormat:@"This is Quick Question #%i for Trial Case: %i", quickQuestion.quickQuestionID, quickQuestion.trialCaseID];
+                compound.quickQuestion.quickQuestionID = i;
+                compound.quickQuestion.lawFirmUserID = 0;
+                compound.quickQuestion.trialCaseID = trialCase.trialCaseID;
+                compound.quickQuestion.dateTimeStamp = [[NSDate alloc] initWithTimeIntervalSinceNow:-10000];
+                compound.quickQuestion.question = [NSString stringWithFormat:@"This is Quick Question #%i for Trial Case: %i", compound.quickQuestion.quickQuestionID, compound.quickQuestion.trialCaseID];
                 
                 NSMutableArray *jurorToQuickQuestions = [[NSMutableArray alloc] initWithCapacity:jurors.count];
                 [jurors enumerateObjectsUsingBlock:^(VDJuror *juror, NSUInteger idx, BOOL *stop) {
                     VDJurorToQuickQuestion *jurorToQuickQuestion = [[VDJurorToQuickQuestion alloc] init];
                     jurorToQuickQuestion.jurorID = juror.jurorID;
-                    jurorToQuickQuestion.quickQuestionID = quickQuestion.quickQuestionID;
+                    jurorToQuickQuestion.quickQuestionID = compound.quickQuestion.quickQuestionID;
                     
                     NSInteger answerInt = arc4random() % 5;
                     switch (answerInt) {
@@ -64,9 +65,9 @@ static NSMutableDictionary *trialCaseIDToQuickQuestions = nil;
                     
                     [jurorToQuickQuestions addObject:jurorToQuickQuestion];
                 }];
-                quickQuestion.jurorToQuickQuestions = jurorToQuickQuestions;
+                compound.jurorToQuickQuestions = jurorToQuickQuestions;
                 
-                [quickQuestions addObject:quickQuestion];
+                [quickQuestions addObject:compound];
             }
             
         } withFailure:^(NSError *error){
