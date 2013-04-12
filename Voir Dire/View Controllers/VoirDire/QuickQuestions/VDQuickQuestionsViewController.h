@@ -13,5 +13,6 @@
 @interface VDQuickQuestionsViewController : VDViewController <VDQuickQuestionsTabBarDelegate>
 
 @property (nonatomic, weak) VDVoirDireViewController *voirDireVC;
+@property (nonatomic, strong) NSMutableArray *quickQuestions;
 
 @end

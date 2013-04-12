@@ -7,7 +7,10 @@
 //
 
 #import "VDViewController.h"
+#import "VDCompoundQuickQuestion.h"
 
 @interface VDQuickQuestionsQuestionViewController : VDViewController
+
+@property (nonatomic, readwrite, strong) VDCompoundQuickQuestion *quickQuestion;
 
 @end

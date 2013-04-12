@@ -14,7 +14,6 @@
 @interface VDQuickQuestionsJurorTab ()
 
 @property (nonatomic, weak) IBOutlet UIButton *jurorButton;
-@property (nonatomic, weak) IBOutlet FXLabel *jurorLabel;
 
 -(IBAction)jurorPressed:(id)sender;
 

@@ -12,6 +12,7 @@
 #import"VDJurorDetailsViewController.h"
 #import "VDJurorManager.h"
 #import "VDQuickQuestionsViewController.h"
+#import "VDQuickQuestionManager.h"
 
 #define kQuickQuestionsHiddenHeight 50
 #define kQuickQuestionsShownHeight 308
@@ -40,6 +41,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [VDQuickQuestionManager quickQuestionsForTrialCase:_trialCase withSuccessHandler:^(NSMutableArray *quickQuestions){
+        _quickQuestionsVC.quickQuestions = quickQuestions;
+    } withFailure:^(NSError *error){
+        
+    }];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

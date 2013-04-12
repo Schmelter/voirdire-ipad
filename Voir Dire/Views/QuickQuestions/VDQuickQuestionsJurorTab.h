@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "VDQuickQuestionsTabBar.h"
+#import "FXLabel.h"
 
 @interface VDQuickQuestionsJurorTab : UIView
 
+@property (nonatomic, weak) IBOutlet FXLabel *jurorLabel;
 @property (nonatomic, weak) VDQuickQuestionsTabBar *tabBar;
 
 @property (nonatomic) BOOL selected;

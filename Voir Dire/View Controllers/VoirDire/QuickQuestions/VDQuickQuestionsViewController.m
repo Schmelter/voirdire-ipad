@@ -9,11 +9,11 @@
 #import "VDQuickQuestionsViewController.h"
 #import "VDQuickQuestionsJurorTab.h"
 #import "VDQuickQuestionsQuestionViewController.h"
+#import "VDCompoundQuickQuestion.h"
 
 @interface VDQuickQuestionsViewController ()
 
 @property (nonatomic, weak) IBOutlet VDQuickQuestionsTabBar *tabBar;
-@property (nonatomic, strong) NSMutableArray *jurorTabs;
 @property (nonatomic, weak) UITabBarController *subTabBarController;
 
 @end
@@ -25,7 +25,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        self.jurorTabs = [[NSMutableArray alloc] initWithCapacity:10];
     }
     return self;
 }
@@ -34,7 +33,6 @@
     self = [super initWithCoder:aDecoder];
     if (self) {
         // Custom initialization
-        self.jurorTabs = [[NSMutableArray alloc] initWithCapacity:10];
     }
     return self;
 }
@@ -44,7 +42,28 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    _tabBar.jurorTabs = self.jurorTabs;
+    [self updateView];
+}
+
+-(void)updateView {
+    [[self.subTabBarController childViewControllers] enumerateObjectsUsingBlock:^(VDQuickQuestionsQuestionViewController *qqVC, NSUInteger idx, BOOL *stop){
+        [qqVC removeFromParentViewController];
+    }];
+    
+    NSMutableArray *jurorTabs = [[NSMutableArray alloc] initWithCapacity:_quickQuestions.count];
+    [_quickQuestions enumerateObjectsUsingBlock:^(VDCompoundQuickQuestion *quickQuestion, NSUInteger idx, BOOL *stop) {
+        VDQuickQuestionsJurorTab *newTab = [[[NSBundle mainBundle] loadNibNamed:@"VDQuickQuestionsJurorTab" owner:nil options:nil] objectAtIndex:0];
+        newTab.jurorLabel.text = [NSString stringWithFormat:@"%i", quickQuestion.quickQuestion.quickQuestionID];
+        [jurorTabs addObject:newTab];
+        
+        VDQuickQuestionsQuestionViewController *questionVC = [[[NSBundle mainBundle] loadNibNamed:@"VDQuickQuestionsQuestionViewController" owner:nil options:nil] objectAtIndex:0];
+        questionVC.quickQuestion = quickQuestion;
+        [self.subTabBarController addChildViewController:questionVC];
+    }];
+    
+    
+    
+    _tabBar.jurorTabs = jurorTabs;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -65,6 +84,7 @@
 
 #pragma mark - VDQuickQuestionsTabBarDelegate methods
 -(void)tabBar:(VDQuickQuestionsTabBar*)tabBar didSelectTab:(VDQuickQuestionsJurorTab*)selectedTab {
+    _voirDireVC.quickQuestionsHidden = NO;
     NSInteger index = [_tabBar.jurorTabs indexOfObject:selectedTab];
     self.subTabBarController.selectedIndex = index;
 }
@@ -72,15 +92,20 @@
 -(void)addJurorPressedForTabBar:(VDQuickQuestionsTabBar*)tabBar {
     _voirDireVC.quickQuestionsHidden = NO;
     
-    VDQuickQuestionsJurorTab *newTab = [[[NSBundle mainBundle] loadNibNamed:@"VDQuickQuestionsJurorTab" owner:nil options:nil] objectAtIndex:0];
-    [self.jurorTabs addObject:newTab];
-    _tabBar.jurorTabs = self.jurorTabs;
+    VDCompoundQuickQuestion *quickQuestion = [[VDCompoundQuickQuestion alloc] init];
+    quickQuestion.quickQuestion = [[VDQuickQuestion alloc] init];
+    quickQuestion.jurorToQuickQuestions = [[NSMutableArray alloc] initWithCapacity:5];
+    quickQuestion.quickQuestion.quickQuestionID = [_quickQuestions count];
+    [_quickQuestions addObject:quickQuestion];
+    [self updateView];
     
-    VDQuickQuestionsQuestionViewController *questionVC = [[[NSBundle mainBundle] loadNibNamed:@"VDQuickQuestionsQuestionViewController" owner:nil options:nil] objectAtIndex:0];
-    [self.subTabBarController addChildViewController:questionVC];
-    
-    _tabBar.selectedTab = newTab;
+    //_tabBar.selectedTab = newTab;
 }
 #pragma mark ---
+
+-(void)setQuickQuestions:(NSMutableArray *)quickQuestions {
+    _quickQuestions = quickQuestions;
+    [self updateView];
+}
 
 @end
