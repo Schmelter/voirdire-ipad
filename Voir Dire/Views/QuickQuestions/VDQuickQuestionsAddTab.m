@@ -29,7 +29,7 @@
 }
 
 -(void)addPressed:(id)sender {
-    [_tabBar addJurorPressed];
+    [_tabBar addQuestionPressed];
 }
 
 @end

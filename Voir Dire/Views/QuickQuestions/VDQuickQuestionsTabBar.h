@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@class VDQuickQuestionsJurorTab;
+@class VDQuickQuestionsQuestionTab;
 @class VDQuickQuestionsTabBar;
 
 @protocol VDQuickQuestionsTabBarDelegate <NSObject>
 
 @required
--(void)tabBar:(VDQuickQuestionsTabBar*)tabBar didSelectTab:(VDQuickQuestionsJurorTab*)selectedTab;
--(void)addJurorPressedForTabBar:(VDQuickQuestionsTabBar*)tabBar;
+-(void)tabBar:(VDQuickQuestionsTabBar*)tabBar didSelectTab:(VDQuickQuestionsQuestionTab*)selectedTab;
+-(void)addQuestionPressedForTabBar:(VDQuickQuestionsTabBar*)tabBar;
 
 @end
 
@@ -23,15 +23,15 @@
 
 @interface VDQuickQuestionsTabBar : UIView {
     @private
-    NSMutableArray *_jurorTabs;
+    NSMutableArray *_questionTabs;
 }
 
 @property (nonatomic, weak) IBOutlet id<VDQuickQuestionsTabBarDelegate> delegate;
-@property (nonatomic, readonly, strong) NSArray *jurorTabs;
-@property (nonatomic, strong) VDQuickQuestionsJurorTab *selectedTab;
+@property (nonatomic, readonly, strong) NSArray *questionTabs;
+@property (nonatomic, strong) VDQuickQuestionsQuestionTab *selectedTab;
 
--(void)addJurorPressed;
--(void)jurorPressed:(VDQuickQuestionsJurorTab*)jurorTab;
--(void)addJurorTab:(VDQuickQuestionsJurorTab*)jurorTab;
+-(void)addQuestionPressed;
+-(void)questionPressed:(VDQuickQuestionsQuestionTab*)questionTab;
+-(void)addQuestionTab:(VDQuickQuestionsQuestionTab*)questionTab;
 
 @end

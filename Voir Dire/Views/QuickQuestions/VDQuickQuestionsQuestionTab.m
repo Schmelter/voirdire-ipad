@@ -1,25 +1,25 @@
 //
-//  VDQuickQuestionsJurorTab.m
+//  VDQuickQuestionsQuestionTab.m
 //  Voir Dire
 //
 //  Created by Greg Schmelter on 4/9/13.
 //  Copyright (c) 2013 Voir Dire. All rights reserved.
 //
 
-#import "VDQuickQuestionsJurorTab.h"
+#import "VDQuickQuestionsQuestionTab.h"
 #import "FXLabel.h"
 #import <QuartzCore/QuartzCore.h>
 #import "VDConstants.h"
 
-@interface VDQuickQuestionsJurorTab ()
+@interface VDQuickQuestionsQuestionTab ()
 
-@property (nonatomic, weak) IBOutlet UIButton *jurorButton;
+@property (nonatomic, weak) IBOutlet UIButton *questionButton;
 
--(IBAction)jurorPressed:(id)sender;
+-(IBAction)questionPressed:(id)sender;
 
 @end
 
-@implementation VDQuickQuestionsJurorTab
+@implementation VDQuickQuestionsQuestionTab
 
 -(void)commonInit {
     self.selected = NO;
@@ -48,8 +48,8 @@
     return self;
 }
 
--(IBAction)jurorPressed:(id)sender {
-    [_tabBar jurorPressed:self];
+-(IBAction)questionPressed:(id)sender {
+    [_tabBar questionPressed:self];
 }
 
 -(void)setSelected:(BOOL)selected {

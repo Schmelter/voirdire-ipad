@@ -1,5 +1,5 @@
 //
-//  VDQuickQuestionsJurorTab.h
+//  VDQuickQuestionsQuestionTab.h
 //  Voir Dire
 //
 //  Created by Greg Schmelter on 4/9/13.
@@ -10,9 +10,9 @@
 #import "VDQuickQuestionsTabBar.h"
 #import "FXLabel.h"
 
-@interface VDQuickQuestionsJurorTab : UIView
+@interface VDQuickQuestionsQuestionTab : UIView
 
-@property (nonatomic, weak) IBOutlet FXLabel *jurorLabel;
+@property (nonatomic, weak) IBOutlet FXLabel *questionLabel;
 @property (nonatomic, weak) VDQuickQuestionsTabBar *tabBar;
 
 @property (nonatomic) BOOL selected;

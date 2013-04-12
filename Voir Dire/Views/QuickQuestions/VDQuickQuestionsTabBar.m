@@ -7,11 +7,10 @@
 //
 
 #import "VDQuickQuestionsTabBar.h"
-#import "VDQuickQuestionsJurorTab.h"
+#import "VDQuickQuestionsQuestionTab.h"
 #import "VDQuickQuestionsAddTab.h"
-#import "VDJuror.h"
 
-#define kJurorTabSpacing 5.0
+#define kQuestionTabSpacing 5.0
 
 @interface VDQuickQuestionsTabBar ()
 
@@ -22,14 +21,14 @@
 
 @implementation VDQuickQuestionsTabBar
 
-@synthesize jurorTabs = _jurorTabs;
+@synthesize questionTabs = _questionTabs;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        self.jurorTabs = [[NSMutableArray alloc] initWithCapacity:10];
+        self.questionTabs = [[NSMutableArray alloc] initWithCapacity:10];
     }
     return self;
 }
@@ -47,7 +46,7 @@
         NSArray *customKeys = @[ @"delegate" ];
         [real setValuesForKeysWithDictionary:[self dictionaryWithValuesForKeys:customKeys]];
         
-        real.jurorTabs = [[NSMutableArray alloc] initWithCapacity:10];
+        real.questionTabs = [[NSMutableArray alloc] initWithCapacity:10];
         
         [real updateView];
         return real;
@@ -61,11 +60,11 @@
     }];
     
     __block float xIndent = 0;
-    [_jurorTabs enumerateObjectsUsingBlock:^(VDQuickQuestionsJurorTab *tab, NSUInteger idx, BOOL *stop) {
+    [_questionTabs enumerateObjectsUsingBlock:^(VDQuickQuestionsQuestionTab *tab, NSUInteger idx, BOOL *stop) {
         tab.tabBar = self;
         [self addSubview:tab];
         tab.frame = CGRectMake(xIndent, 0, tab.frame.size.width, tab.frame.size.height);
-        xIndent += tab.frame.size.width + kJurorTabSpacing;
+        xIndent += tab.frame.size.width + kQuestionTabSpacing;
     }];
     
     // Add the add tab bar view
@@ -77,28 +76,28 @@
     [self setNeedsDisplay];
 }
 
--(void)setJurorTabs:(NSMutableArray *)jurorTabs {
-    _jurorTabs = jurorTabs;
+-(void)setQuestionTabs:(NSArray *)questionTabs {
+    _questionTabs = questionTabs;
     [self updateView];
 }
 
--(void)addJurorPressed {
-    [self.delegate addJurorPressedForTabBar:self];
+-(void)addQuestionPressed {
+    [self.delegate addQuestionPressedForTabBar:self];
 }
 
--(void)jurorPressed:(VDQuickQuestionsJurorTab*)jurorTab {
-    self.selectedTab = jurorTab;
+-(void)questionPressed:(VDQuickQuestionsQuestionTab*)questionTab {
+    self.selectedTab = questionTab;
 }
 
--(void)setSelectedTab:(VDQuickQuestionsJurorTab *)selectedTab {
+-(void)setSelectedTab:(VDQuickQuestionsQuestionTab *)selectedTab {
     _selectedTab.selected = NO;
     _selectedTab = selectedTab;
     _selectedTab.selected = YES;
     [self.delegate tabBar:self didSelectTab:_selectedTab];
 }
 
--(void)addJurorTab:(VDQuickQuestionsJurorTab *)jurorTab {
-    [_jurorTabs addObject:jurorTab];
+-(void)addQuestionTab:(VDQuickQuestionsQuestionTab *)jurorTab {
+    [_questionTabs addObject:jurorTab];
     [self updateView];
 }
 

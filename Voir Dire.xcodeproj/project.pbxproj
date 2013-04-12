@@ -105,11 +105,11 @@
 		89FA582D171490DD00B8B96A /* VDQuickQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FA582C171490DD00B8B96A /* VDQuickQuestionsViewController.m */; };
 		89FA5837171491A900B8B96A /* VDQuickQuestionsTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FA5836171491A900B8B96A /* VDQuickQuestionsTabBar.m */; };
 		89FA58391714920300B8B96A /* VDQuickQuestionsTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89FA58381714920300B8B96A /* VDQuickQuestionsTabBar.xib */; };
-		89FA583C1714930C00B8B96A /* VDQuickQuestionsJurorTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FA583B1714930C00B8B96A /* VDQuickQuestionsJurorTab.m */; };
+		89FA583C1714930C00B8B96A /* VDQuickQuestionsQuestionTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FA583B1714930C00B8B96A /* VDQuickQuestionsQuestionTab.m */; };
 		89FA583F171493B000B8B96A /* VDQuickQuestionsAddTab.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FA583E171493B000B8B96A /* VDQuickQuestionsAddTab.m */; };
 		89FA58441714952C00B8B96A /* FXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FA58421714952C00B8B96A /* FXLabel.m */; };
 		89FA58451714952C00B8B96A /* LICENCE.md in Resources */ = {isa = PBXBuildFile; fileRef = 89FA58431714952C00B8B96A /* LICENCE.md */; };
-		89FA58471714997100B8B96A /* VDQuickQuestionsJurorTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89FA58461714997100B8B96A /* VDQuickQuestionsJurorTab.xib */; };
+		89FA58471714997100B8B96A /* VDQuickQuestionsQuestionTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89FA58461714997100B8B96A /* VDQuickQuestionsQuestionTab.xib */; };
 		89FA58491714999700B8B96A /* VDQuickQuestionsAddTab.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89FA58481714999700B8B96A /* VDQuickQuestionsAddTab.xib */; };
 		89FA58501714CF5F00B8B96A /* VDQuickQuestionsQuestionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89FA584F1714CF5F00B8B96A /* VDQuickQuestionsQuestionViewController.xib */; };
 		89FA58531714CFB000B8B96A /* VDQuickQuestionsQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89FA58521714CFB000B8B96A /* VDQuickQuestionsQuestionViewController.m */; };
@@ -260,14 +260,14 @@
 		89FA5835171491A900B8B96A /* VDQuickQuestionsTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDQuickQuestionsTabBar.h; sourceTree = "<group>"; };
 		89FA5836171491A900B8B96A /* VDQuickQuestionsTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDQuickQuestionsTabBar.m; sourceTree = "<group>"; };
 		89FA58381714920300B8B96A /* VDQuickQuestionsTabBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VDQuickQuestionsTabBar.xib; sourceTree = "<group>"; };
-		89FA583A1714930C00B8B96A /* VDQuickQuestionsJurorTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDQuickQuestionsJurorTab.h; sourceTree = "<group>"; };
-		89FA583B1714930C00B8B96A /* VDQuickQuestionsJurorTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDQuickQuestionsJurorTab.m; sourceTree = "<group>"; };
+		89FA583A1714930C00B8B96A /* VDQuickQuestionsQuestionTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDQuickQuestionsQuestionTab.h; sourceTree = "<group>"; };
+		89FA583B1714930C00B8B96A /* VDQuickQuestionsQuestionTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDQuickQuestionsQuestionTab.m; sourceTree = "<group>"; };
 		89FA583D171493B000B8B96A /* VDQuickQuestionsAddTab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDQuickQuestionsAddTab.h; sourceTree = "<group>"; };
 		89FA583E171493B000B8B96A /* VDQuickQuestionsAddTab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDQuickQuestionsAddTab.m; sourceTree = "<group>"; };
 		89FA58411714952C00B8B96A /* FXLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXLabel.h; sourceTree = "<group>"; };
 		89FA58421714952C00B8B96A /* FXLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXLabel.m; sourceTree = "<group>"; };
 		89FA58431714952C00B8B96A /* LICENCE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.md; sourceTree = "<group>"; };
-		89FA58461714997100B8B96A /* VDQuickQuestionsJurorTab.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VDQuickQuestionsJurorTab.xib; sourceTree = "<group>"; };
+		89FA58461714997100B8B96A /* VDQuickQuestionsQuestionTab.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VDQuickQuestionsQuestionTab.xib; sourceTree = "<group>"; };
 		89FA58481714999700B8B96A /* VDQuickQuestionsAddTab.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VDQuickQuestionsAddTab.xib; sourceTree = "<group>"; };
 		89FA584F1714CF5F00B8B96A /* VDQuickQuestionsQuestionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VDQuickQuestionsQuestionViewController.xib; sourceTree = "<group>"; };
 		89FA58511714CFB000B8B96A /* VDQuickQuestionsQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDQuickQuestionsQuestionViewController.h; sourceTree = "<group>"; };
@@ -687,9 +687,9 @@
 				89FA5835171491A900B8B96A /* VDQuickQuestionsTabBar.h */,
 				89FA5836171491A900B8B96A /* VDQuickQuestionsTabBar.m */,
 				89FA58381714920300B8B96A /* VDQuickQuestionsTabBar.xib */,
-				89FA583A1714930C00B8B96A /* VDQuickQuestionsJurorTab.h */,
-				89FA583B1714930C00B8B96A /* VDQuickQuestionsJurorTab.m */,
-				89FA58461714997100B8B96A /* VDQuickQuestionsJurorTab.xib */,
+				89FA583A1714930C00B8B96A /* VDQuickQuestionsQuestionTab.h */,
+				89FA583B1714930C00B8B96A /* VDQuickQuestionsQuestionTab.m */,
+				89FA58461714997100B8B96A /* VDQuickQuestionsQuestionTab.xib */,
 				89FA583D171493B000B8B96A /* VDQuickQuestionsAddTab.h */,
 				89FA583E171493B000B8B96A /* VDQuickQuestionsAddTab.m */,
 				89FA58481714999700B8B96A /* VDQuickQuestionsAddTab.xib */,
@@ -811,7 +811,7 @@
 				894AF8D11703E5C30052D19E /* avatar_americanindian_male.png in Resources */,
 				89FA58391714920300B8B96A /* VDQuickQuestionsTabBar.xib in Resources */,
 				89FA58451714952C00B8B96A /* LICENCE.md in Resources */,
-				89FA58471714997100B8B96A /* VDQuickQuestionsJurorTab.xib in Resources */,
+				89FA58471714997100B8B96A /* VDQuickQuestionsQuestionTab.xib in Resources */,
 				89FA58491714999700B8B96A /* VDQuickQuestionsAddTab.xib in Resources */,
 				89FA58501714CF5F00B8B96A /* VDQuickQuestionsQuestionViewController.xib in Resources */,
 			);
@@ -859,7 +859,7 @@
 				897C8685170BDA0B00ECF850 /* VDHomeHandleButton.m in Sources */,
 				89FA582D171490DD00B8B96A /* VDQuickQuestionsViewController.m in Sources */,
 				89FA5837171491A900B8B96A /* VDQuickQuestionsTabBar.m in Sources */,
-				89FA583C1714930C00B8B96A /* VDQuickQuestionsJurorTab.m in Sources */,
+				89FA583C1714930C00B8B96A /* VDQuickQuestionsQuestionTab.m in Sources */,
 				89FA583F171493B000B8B96A /* VDQuickQuestionsAddTab.m in Sources */,
 				89FA58441714952C00B8B96A /* FXLabel.m in Sources */,
 				89FA58531714CFB000B8B96A /* VDQuickQuestionsQuestionViewController.m in Sources */,

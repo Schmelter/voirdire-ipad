@@ -7,7 +7,7 @@
 //
 
 #import "VDQuickQuestionsViewController.h"
-#import "VDQuickQuestionsJurorTab.h"
+#import "VDQuickQuestionsQuestionTab.h"
 #import "VDQuickQuestionsQuestionViewController.h"
 #import "VDCompoundQuickQuestion.h"
 
@@ -49,10 +49,10 @@
 
 -(void)updateView:(BOOL)selectLastTab {
     [_quickQuestions enumerateObjectsUsingBlock:^(VDCompoundQuickQuestion *quickQuestion, NSUInteger idx, BOOL *stop) {
-        if ([[self.tabBar jurorTabs] count] <= idx) {
-            VDQuickQuestionsJurorTab *newTab = [[[NSBundle mainBundle] loadNibNamed:@"VDQuickQuestionsJurorTab" owner:nil options:nil] objectAtIndex:0];
-            newTab.jurorLabel.text = [NSString stringWithFormat:@"%i", quickQuestion.quickQuestion.quickQuestionID];
-            [self.tabBar addJurorTab:newTab];
+        if ([[self.tabBar questionTabs] count] <= idx) {
+            VDQuickQuestionsQuestionTab *newTab = [[[NSBundle mainBundle] loadNibNamed:@"VDQuickQuestionsQuestionTab" owner:nil options:nil] objectAtIndex:0];
+            newTab.questionLabel.text = [NSString stringWithFormat:@"%i", quickQuestion.quickQuestion.quickQuestionID];
+            [self.tabBar addQuestionTab:newTab];
         }
         
         if ([[self.subTabBarController viewControllers] count] <= idx) {
@@ -64,7 +64,7 @@
     }];
     
     if (selectLastTab) {
-        self.tabBar.selectedTab = ((VDQuickQuestionsJurorTab*)[[self.tabBar jurorTabs] lastObject]);
+        self.tabBar.selectedTab = ((VDQuickQuestionsQuestionTab*)[[self.tabBar questionTabs] lastObject]);
     }
 }
 
@@ -85,13 +85,13 @@
 }
 
 #pragma mark - VDQuickQuestionsTabBarDelegate methods
--(void)tabBar:(VDQuickQuestionsTabBar*)tabBar didSelectTab:(VDQuickQuestionsJurorTab*)selectedTab {
+-(void)tabBar:(VDQuickQuestionsTabBar*)tabBar didSelectTab:(VDQuickQuestionsQuestionTab*)selectedTab {
     _voirDireVC.quickQuestionsHidden = NO;
-    NSInteger index = [_tabBar.jurorTabs indexOfObject:selectedTab];
+    NSInteger index = [_tabBar.questionTabs indexOfObject:selectedTab];
     self.subTabBarController.selectedIndex = index;
 }
 
--(void)addJurorPressedForTabBar:(VDQuickQuestionsTabBar*)tabBar {
+-(void)addQuestionPressedForTabBar:(VDQuickQuestionsTabBar*)tabBar {
     _voirDireVC.quickQuestionsHidden = NO;
     
     VDCompoundQuickQuestion *quickQuestion = [[VDCompoundQuickQuestion alloc] init];
