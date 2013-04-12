@@ -7,9 +7,8 @@
 //
 
 #import "VDVoirDireViewController.h"
-#import "VDJuryPoolViewController.h"
 #import "VDJurorNote.h"
-#import"VDJurorDetailsViewController.h"
+#import "VDJurorDetailsViewController.h"
 #import "VDJurorManager.h"
 #import "VDQuickQuestionsViewController.h"
 #import "VDQuickQuestionManager.h"
@@ -53,6 +52,7 @@
         self.juryPoolVC = segue.destinationViewController;
         
         self.juryPoolVC.voirDireVC = self;
+        self.juryPoolVC.delegate = self;
         [VDJurorManager jurorsForTrialCase:self.trialCase withSuccessHandler:^(NSMutableArray *jurors){
             self.juryPoolVC.jurors = jurors;
         } withFailure:^(NSError *error){
@@ -64,7 +64,9 @@
     }
 }
 
--(void)displayJurorDetails:(NSInteger)idx ForJurors:(NSMutableArray*)jurors {
+#pragma mark - VDJuryPoolViewControllerDelegate Methods
+
+-(void)juryPoolVCDidSelectCell:(UICollectionViewCell*)cell ForIndex:(NSInteger)index InJurors:(NSMutableArray*)jurors {
     if (self.jurorDetailsVC == nil) {
         self.jurorDetailsVC = (VDJurorDetailsViewController*)[[[NSBundle mainBundle] loadNibNamed:@"VDJurorDetailsViewController" owner:self options:nil] objectAtIndex:0];
         self.jurorDetailsVC.delegate = self;
@@ -75,8 +77,14 @@
         [self.jurorDetailsVC didMoveToParentViewController:self];
     }
     self.jurorDetailsVC.jurors = jurors;
-    self.jurorDetailsVC.jurorIdx = idx;
+    self.jurorDetailsVC.jurorIdx = index;
 }
+
+-(void)juryPoolVCDidDeselectCell:(UICollectionViewCell*)cell ForIndex:(NSInteger)index InJurors:(NSMutableArray*)jurors {
+    
+}
+
+#pragma mark ---
 
 -(void)dismissJurorDetails {
     [self.jurorDetailsVC willMoveToParentViewController:nil];

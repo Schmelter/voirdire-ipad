@@ -10,13 +10,13 @@
 #import "VDTrialCase.h"
 #import "VDJuror.h"
 #import "VDJurorDetailsViewController.h"
+#import "VDJuryPoolViewController.h"
 
-@interface VDVoirDireViewController : VDViewController <VDJurorDetailsViewControllerDelegate>
+@interface VDVoirDireViewController : VDViewController <VDJurorDetailsViewControllerDelegate, VDJuryPoolViewControllerDelegate>
 
 @property (nonatomic, readwrite, strong) VDTrialCase *trialCase;
 @property (nonatomic, readwrite) BOOL quickQuestionsHidden;
 
--(void)displayJurorDetails:(NSInteger)idx ForJurors:(NSMutableArray*)jurors;
 -(void)dismissJurorDetails;
 
 @end

@@ -12,6 +12,7 @@
 #import "VDJurorViewCell.h"
 #import <stdlib.h>
 #import "VDJurorToAvatar.h"
+#import "VDVoirDireViewController.h"
 
 @interface VDJuryPoolViewController ()
 
@@ -77,14 +78,15 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
-    cell.highlighted = YES;
     
-    [self.voirDireVC displayJurorDetails:indexPath.row ForJurors:self.jurors];
+    
+    [_delegate juryPoolVCDidSelectCell:cell ForIndex:indexPath.row InJurors:self.jurors];
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
-    cell.highlighted = NO;
+    
+    [_delegate juryPoolVCDidDeselectCell:cell ForIndex:indexPath.row InJurors:self.jurors];
 }
 #pragma mark ---
 
