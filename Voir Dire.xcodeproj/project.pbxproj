@@ -473,7 +473,6 @@
 			isa = PBXGroup;
 			children = (
 				89FA58311714918500B8B96A /* QuickQuestions */,
-				897C867B170BD28D00ECF850 /* NavigationButtons */,
 				89B2AA1F16FFA9A7008E10BA /* JurorCell */,
 			);
 			path = Views;
@@ -515,7 +514,8 @@
 				897C8683170BDA0B00ECF850 /* VDHomeHandleButton.h */,
 				897C8684170BDA0B00ECF850 /* VDHomeHandleButton.m */,
 			);
-			path = NavigationButtons;
+			name = NavigationButtons;
+			path = ../../Views/NavigationButtons;
 			sourceTree = "<group>";
 		};
 		8981229316E8465E0028C05E = {
@@ -623,6 +623,7 @@
 		89B2AA0616FF8B17008E10BA /* VoirDire */ = {
 			isa = PBXGroup;
 			children = (
+				897C867B170BD28D00ECF850 /* NavigationButtons */,
 				89FA5829171490C900B8B96A /* QuickQuestions */,
 				89038E4117012A4F00683FAB /* JurorDetails */,
 				89B2AA1316FF9392008E10BA /* JuryPool */,
