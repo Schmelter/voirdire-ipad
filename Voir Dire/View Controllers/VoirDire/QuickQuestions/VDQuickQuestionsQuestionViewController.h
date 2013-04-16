@@ -9,7 +9,7 @@
 #import "VDViewController.h"
 #import "VDCompoundQuickQuestion.h"
 
-@interface VDQuickQuestionsQuestionViewController : VDViewController
+@interface VDQuickQuestionsQuestionViewController : VDViewController <UITextViewDelegate>
 
 @property (nonatomic, readwrite, strong) VDCompoundQuickQuestion *quickQuestion;
 
